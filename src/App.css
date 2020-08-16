@@ -1,4 +1,39 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(255, 145, 0);
+  display: flex;
+  width:100%;
+  height: 200vh;
+}
+
+.pageWrap{
+  position:fixed;
+  left:0;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.centralFigureWrap{
+  width:30vw;
+  height: 30vw;
+  border: 1px solid blue;
+}
+
+
+
+
+/* ORIG PONIŻEJ */
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +70,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
