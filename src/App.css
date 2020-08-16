@@ -29,45 +29,58 @@ body{
   border: 1px solid blue;
 }
 
-
-
-
-/* ORIG PONIŻEJ */
-/* .App {
-  text-align: center;
+.cloudWrap1, .cloudWrap2, .cloudWrap3, .cloudWrap4, .cloudWrap5, .cloudWrap6, .cloudWrap7, .cloudWrap8 {
+  position: fixed;
+  width:20vw;
+  height: 20vw;
+  /* border: 1px solid rgb(131, 131, 238); */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cloudWrap1{
+  top:20vh;
+  left: 10vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cloudWrap2{
+  top:20vh;
+  left: 20vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cloudWrap3{
+  top:20vh;
+  left:40vw;
 }
 
-.App-link {
-  color: #61dafb;
+.cloudWrap4{
+  top:20vh;
+  left:70vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.cloudWrap5{
+  top:50vh;
+  left:10vw;
+}
+
+.cloudWrap6{
+  top:50vh;
+  left:20vw;
+}
+
+.cloudWrap7{
+  top:50vh;
+  left:50vw;
+}
+
+.cloudWrap8{
+  top:50vh;
+  left:65vw;
+}
+
+.cloudLogoClass1, .cloudLogoClass2, .cloudLogoClass3, .cloudLogoClass4, .cloudLogoClass5, .cloudLogoClass6, .cloudLogoClass7, .cloudLogoClass8 {
+  width: 20vw;
+  height: 20vw;  
+   /* border: 2px solid red; */
+}
+
+
+
