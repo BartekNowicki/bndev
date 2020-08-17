@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Developer from './components/Developer';
 import Clouds from './components/Clouds';
+import Developer from './components/Developer';
+import IntroAnimation from './components/IntroAnimation';
 
 class App extends Component {
     state = {
@@ -74,7 +75,8 @@ class App extends Component {
         <>
         <div className="pageWrap">
         <Clouds data = {this.state.cloudData}/>     
-        <Developer/>   
+        <Developer/>
+        <IntroAnimation/>
         </div>
         </>
     );

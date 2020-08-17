@@ -6,7 +6,9 @@ import reactLogo from '../pics/react.svg';
 import nodejsLogo from '../pics/nodejs.svg';   
 import expressLogo from '../pics/express.svg';   
 import mongodbLogo from '../pics/mongodb.svg';   
-import svgLogo from '../pics/svg.svg';      
+import svgLogo from '../pics/svg.svg';
+
+        
 
 const logoArray = [html5Logo, css3Logo, javascriptLogo, reactLogo, nodejsLogo, expressLogo, mongodbLogo, svgLogo];
 
