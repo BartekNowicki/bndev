@@ -7,6 +7,7 @@ import nodejsLogo from '../pics/nodejs.svg';
 import expressLogo from '../pics/express.svg';   
 import mongodbLogo from '../pics/mongodb.svg';   
 import svgLogo from '../pics/svg.svg';
+import scroll from '../pics/scroll.svg';
 
         
 

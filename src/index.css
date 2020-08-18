@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+/* for Bartosz Nowicki */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+/* for JUNIOR below, into css add font-family: 'Anton', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');  
+/* for my name is, into css: font-family: 'Coda Caption', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
+/* for code script, into css: font-family: 'VT323', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 
 /* ORIG PONIŻEJ */
 /* body {
