@@ -24,8 +24,7 @@ body{
   /* border: 1px solid black; */
 }
 
-.centralFigureWrap{
-  
+.centralFigureWrap{  
   width:100%;
   height: 30vw;
   max-height: 20vh;
@@ -44,44 +43,56 @@ body{
   background-image: url(./pics/thoughtCloud.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  animation-name: cloudBump;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
   /* border: 1px solid rgb(131, 131, 238); */
 }
 
 .cloudWrap1{  
   left: 1vw;
-  transform: rotate(0deg) scaleX(-1);  
+  transform: rotate(0deg) scaleX(-1);
+  animation-delay: 17s;  
 }
 .cloudWrap2{  
   left: 11vw;
-  transform: rotate(0deg) scaleX(-1); 
+  transform: rotate(0deg) scaleX(-1);
+  animation-delay: 17.1s;  
 }
 
 .cloudWrap3{  
   left: 21vw;
   transform: rotate(0deg) scaleX(-1);
+  animation-delay: 17.2s; 
 }
 
 .cloudWrap4{  
   left: 30.5vw;
   top:1vh;
   transform: rotate(0deg) scaleX(-1);
+  animation-delay: 17.3s; 
 }
 
 .cloudWrap5{  
   top:1vh;
   left: 54vw;
+  animation-delay: 17.4s; 
 }
 
 .cloudWrap6{  
   left: 64vw;
+  animation-delay: 17.5s; 
 }
 
 .cloudWrap7{  
   left: 74vw;
+  animation-delay: 17.6s; 
 }
 
 .cloudWrap8{  
   left: 84vw;
+  animation-delay: 17.7s; 
 }
 
 .cloudLogoClass1, .cloudLogoClass2, .cloudLogoClass3, .cloudLogoClass4, .cloudLogoClass5, .cloudLogoClass6, .cloudLogoClass7, .cloudLogoClass8 {
@@ -89,8 +100,7 @@ body{
   position: absolute;
   top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  
+  transform: translate(-50%, -50%);  
    /* border: 2px solid red; */
 }
 
@@ -108,7 +118,7 @@ body{
 }
 
 .introAnimation{
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   width: 80vw;
   height: 70vh;
@@ -121,24 +131,28 @@ body{
 }
 
 .tekst1Class, .tekst2Class, .tekst3Class, .tekst4Class, .tekst5Class, .tekst6Class, .tekst7Class, .tekst8Class, .tekst9Class, .tekst10Class {
+  display: inline-flex;
   position: relative;
   left: -100%;
   padding: 0.5vh 2vw;
-  display: flex;
-  justify-content: center;  
+  /* display: flex; */
+  justify-content: center;
+  width: 70%;
+  /* border: 1px solid green;  */
+}
+
+.tekst4Class{
+  left: 50%;
+  font-size: 0;
+}
+
+.tekst1Class, .tekst3Class, .tekst5Class, .tekst6Class, .tekst7Class {
+  left: 50%;
+  font-family: 'Coda Caption', sans-serif;
+  transform: translateX(-50%);
 }
 
 .tekst1Class{
-  font-family: 'Coda Caption', sans-serif;
-  text-transform: uppercase;
-  /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  /* animation-delay: 2s; */
-  transform: translateX(-50%);
   /* border: 1px solid gray;     */
   padding-top: 2vh;
 }
@@ -152,139 +166,125 @@ body{
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-duration: 3s;
-  /* animation-delay: 2s; */
+  animation-delay: 1s;
   transform: translateX(-50%);
   /* border: 1px solid gray;     */
 }
-.tekst3Class{
-  font-family: 'Coda Caption', sans-serif;
-  /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  /* animation-delay: 2s; */
-  transform: translateX(-50%);
-  /* border: 1px solid gray;     */
-}
+.tekst3Class {}
 .tekst4Class{
   /* duration, delay,iterations. */
   /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
+  animation-name: tekst4AnimationJunior;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-duration: 3s;
-  /* animation-delay: 2s; */
+  animation-delay: 4s;
   transform: translateX(-50%);
   /* border: 1px solid gray;     */
 }
-.tekst5Class{
-  font-family: 'Coda Caption', sans-serif;
-  /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  /* animation-delay: 2s; */
+.tekst5Class{}
+.tekst6Class{}
+
+.tekst7Class, .tekst8Class, .tekst9Class, .tekst10Class {
+  font-family: 'VT323', monospace;
   transform: translateX(-50%);
-  /* border: 1px solid gray;     */
+  left: 50%;
 }
-.tekst6Class{
-  font-family: 'Coda Caption', sans-serif;
-  /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  /* animation-delay: 2s; */
-  transform: translateX(-50%);
-  /* border: 1px solid gray;     */
-}
+
 .tekst7Class{
-  font-family: 'VT323', monospace;
-  /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  /* animation-delay: 2s; */
-  transform: translateX(-50%);
-  /* border: 1px solid gray;     */
+  /* border: 1px solid rgb(228, 24, 24); */
 }
+
 .tekst8Class{
-  font-family: 'VT323', monospace;
-  /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  /* animation-delay: 2s; */
-  transform: translateX(-50%);
   /* border: 1px solid gray;     */
 }
 .tekst9Class{
-  font-family: 'VT323', monospace;
-  /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  /* animation-delay: 2s; */
-  transform: translateX(-50%);
   /* border: 1px solid gray;     */
 }
 .tekst10Class{
-  font-family: 'VT323', monospace;
-  /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  /* animation-delay: 2s; */
-  transform: translateX(-50%);
-  /* border: 1px solid gray;     */
   padding-bottom: 30px;
 }
   
+.innerSpanForCodeAnimationtekst7, .innerSpanForCodeAnimationtekst8, .innerSpanForCodeAnimationtekst9, .innerSpanForCodeAnimationtekst10 {
+  /* border: 1px solid blue; */
+  overflow:hidden;
+  position: relative;
+}
+
+.innerSpanForCodeAnimationtekst7::after, .innerSpanForCodeAnimationtekst8::after, .innerSpanForCodeAnimationtekst9::after, .innerSpanForCodeAnimationtekst10::after{
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;  
+  width: 100%;   
+  height: 100%;
+  animation-name: showCodeTekst;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.innerSpanForCodeAnimationtekst7::after{
+background-color:#D9D2B8;
+animation-duration: 1.75s;
+animation-timing-function: steps(14, end);
+animation-delay: 8s;
+}
+
+.innerSpanForCodeAnimationtekst8::after{
+  background-color:#D9D2B8;
+  animation-duration: 2s;
+  animation-timing-function: steps(16, end);
+  animation-delay: 10.75s;
+}
+
+.innerSpanForCodeAnimationtekst9::after{
+  background-color:#D6CFB5;
+  animation-duration: 2.625s;
+  animation-timing-function: steps(21, end);
+  animation-delay: 13.75s;
+}
+
+.innerSpanForCodeAnimationtekst10::after{
+  background-color:#D4CAAF;
+  animation-duration: 0.375s;
+  animation-timing-function: steps(3, end);
+  animation-delay: 16.375s;
+}
+
 
 @keyframes tekst1Animation { 
   0% {left: -100%;}  
   100% {left: 50%;}
 }
-@keyframes tekst2Animation { 
-  0% {left: -100%;}  
-  100% {left: 50%;}
+
+@keyframes tekst4AnimationJunior { 
+  0% {
+    font-size: 0;
+    color: black;
+    transform: translateX(-50%) rotate(0deg);
+  }  
+  50% {
+    font-size: 3vh;
+    color: black;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    font-size: 3vh;
+    color: rgb(197, 8, 8);
+    transform: translateX(-50%) rotate(350deg);
+  }
 }
-@keyframes tekst3Animation { 
-  0% {left: -100%;}  
-  100% {left: 50%;}
+
+@keyframes showCodeTekst {
+  0%{left:0;}
+  100%{left:100%;}
 }
-@keyframes tekst4Animation { 
-  0% {left: -100%;}  
-  100% {left: 50%;}
-}
-@keyframes tekst5Animation { 
-  0% {left: -100%;}  
-  100% {left: 50%;}
-}
-@keyframes tekst6Animation { 
-  0% {left: -100%;}  
-  100% {left: 50%;}
-}
-@keyframes tekst7Animation { 
-  0% {left: -100%;}  
-  100% {left: 50%;}
-}
-@keyframes tekst8Animation { 
-  0% {left: -100%;}  
-  100% {left: 50%;}
+
+@keyframes cloudBump {
+  0%{top:2vh;;}
+  50%{top:3vh;}
+  100%{top:2vh;}
+  
 }
 
 

@@ -29,10 +29,10 @@ const IntroAnimation = props => {
   <span className = "tekst4Class">{text4}</span>
   <span className = "tekst5Class">{text5}</span>
   <span className = "tekst6Class">{text6}</span>
-  <span className = "tekst7Class">{text7}</span>
-  <span className = "tekst8Class">{text8}</span>
-  <span className = "tekst9Class">{text9}</span>
-  <span className = "tekst10Class">{text10}</span>
+  <span className = "tekst7Class"><span className = "innerSpanForCodeAnimationtekst7">{text7}</span></span>
+  <span className = "tekst8Class"><span className = "innerSpanForCodeAnimationtekst8">{text8}</span></span>
+  <span className = "tekst9Class"><span className = "innerSpanForCodeAnimationtekst9">{text9}</span></span>
+  <span className = "tekst10Class"><span className = "innerSpanForCodeAnimationtekst10">{text10}</span></span>
   </div>
   </>
   );
