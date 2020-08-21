@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/bndev/static/css/main.82eb0558.chunk.css",
+    "main.js": "/bndev/static/js/main.2109cdeb.chunk.js",
+    "main.js.map": "/bndev/static/js/main.2109cdeb.chunk.js.map",
+    "runtime-main.js": "/bndev/static/js/runtime-main.af0fa032.js",
+    "runtime-main.js.map": "/bndev/static/js/runtime-main.af0fa032.js.map",
+    "static/js/2.33de33f7.chunk.js": "/bndev/static/js/2.33de33f7.chunk.js",
+    "static/js/2.33de33f7.chunk.js.map": "/bndev/static/js/2.33de33f7.chunk.js.map",
+    "index.html": "/bndev/index.html",
+    "precache-manifest.79dcb7cd91e1cf26149fc96204fdd39a.js": "/bndev/precache-manifest.79dcb7cd91e1cf26149fc96204fdd39a.js",
+    "service-worker.js": "/bndev/service-worker.js",
+    "static/css/main.82eb0558.chunk.css.map": "/bndev/static/css/main.82eb0558.chunk.css.map",
+    "static/js/2.33de33f7.chunk.js.LICENSE.txt": "/bndev/static/js/2.33de33f7.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/bndev/static/media/write.53b662cc.svg",
+    "static/media/arrow.svg": "/bndev/static/media/arrow.5f03f27f.svg",
+    "static/media/closeBtn.svg": "/bndev/static/media/closeBtn.918a9f9d.svg",
+    "static/media/css3.svg": "/bndev/static/media/css3.3707da3c.svg",
+    "static/media/express.svg": "/bndev/static/media/express.c6bab64b.svg",
+    "static/media/html5.svg": "/bndev/static/media/html5.676e8188.svg",
+    "static/media/javascript.svg": "/bndev/static/media/javascript.61ed8b05.svg",
+    "static/media/mongodb.svg": "/bndev/static/media/mongodb.2985235d.svg",
+    "static/media/nodejs.svg": "/bndev/static/media/nodejs.a1231528.svg",
+    "static/media/react.svg": "/bndev/static/media/react.4009eef3.svg",
+    "static/media/svg.svg": "/bndev/static/media/svg.f3dce133.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.af0fa032.js",
+    "static/js/2.33de33f7.chunk.js",
+    "static/css/main.82eb0558.chunk.css",
+    "static/js/main.2109cdeb.chunk.js"
+  ]
+}
