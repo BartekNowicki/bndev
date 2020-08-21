@@ -13,6 +13,9 @@
 /* for code script, into css: font-family: 'VT323', monospace; */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+/* for all other purposes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+/* font-family: 'Roboto Condensed', sans-serif; */
 
 /* ORIG PONIŻEJ */
 /* body {

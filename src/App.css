@@ -24,15 +24,156 @@ body{
   /* border: 1px solid black; */
 }
 
-.centralFigureWrap{  
-  width:100%;
-  height: 30vw;
-  max-height: 20vh;
+.centralFigureWrap{
+  /* relative for the bow-tie */
+  position: relative;
+  width:15vh;
+  height: 15vh;
+  
   /* border: 1px solid blue; */
   background-image: url(./pics/BartoszNowicki.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  transition: 0.5s;
+}
+
+.centralFigureBowtieWrap{
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid blue; */
+  background-image: url(./pics/bow-tie.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.mainSectionWrap{
+  width: 80vw;
+  height: 70vh;
+  /* border: 1px solid pink; */
+}
+
+.contactIcon{
+  position: fixed;
+  bottom: calc(1vw + 7vh + 1vw); 
+  right: 1vw;
+  width: 7vh;
+  height: 7vh;
+  background-image: url(./pics/contacts.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s ease;
+  border-radius: 10px; 
+}
+
+.contactIcon:hover{
+  transform: scale(1,1) translate(-5px, -5px);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.houseIcon{
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+  width: 7vh;
+  height: 7vh;
+  background-image: url(./pics/house.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 130%;
+  transition: 0.3s ease;
+  border-radius: 10px; 
+}
+
+.houseIcon:hover{
+  transform: scale(1,1) translate(-5px, -5px);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.phoneIcon{
+  width: 10vh;
+  height: 10vh;
+  background-image: url(./pics/phone.svg);
+  background-position: center center;
+  background-size: 130%;
+  transition: 0.3s ease;
+  border-radius: 10px; 
+  /* border: 1px solid black; */
+}
+
+.astro{
+  width: 30vh;
+  height: 30vh;
+  background-image: url(./pics/astro.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* border: 1px solid black; */
+}
+
+.contactDetails {
+  font-size: 3vh;
+  white-space: nowrap;
+}
+
+.writeIcon{
+  width: 10vh;
+  height: 10vh;
+  background-image: url(./pics/write.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* border: 1px solid red; */
+}
+
+.cloudsCloseBtn{
+position: fixed;
+top: 20vw;
+right: 1vw;
+width: 10vh;
+height: 10vh;
+background-image: url(./pics/thoughtCloudRight.svg);
+background-repeat: no-repeat;
+background-size: contain;
+/* border: 1px solid red; */
+transition: 0.3s ease;
+border-radius: 10px; 
+}
+
+.cloudsCloseBtn:hover{
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.cloudsCloseBtnImg{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 32%;
+  right: 20%;
+  width: 30%;
+  height: 30%;
+}
+
+
+.cloudWrap1, .cloudWrap2, .cloudWrap3, .cloudWrap4 {
+background-image: url(./pics/thoughtCloudRight.svg);
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.cloudWrap5, .cloudWrap6, .cloudWrap7, .cloudWrap8{
+  background-image: url(./pics/thoughtCloudLeft.svg);
+  background-repeat: no-repeat;
+  background-size: contain;  
 }
 
 .cloudWrap1, .cloudWrap2, .cloudWrap3, .cloudWrap4, .cloudWrap5, .cloudWrap6, .cloudWrap7, .cloudWrap8 {
@@ -40,37 +181,107 @@ body{
   top:2vh;
   width:15vw;
   height: 15vw;
-  background-image: url(./pics/thoughtCloud.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
   animation-name: cloudBump;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
   /* border: 1px solid rgb(131, 131, 238); */
+  transition: 0.5s;
 }
+
+.activeCloud1, .activeCloud2,.activeCloud3, .activeCloud4, .activeCloud5, .activeCloud6, .activeCloud7, .activeCloud8 {
+  /* border: 1px solid red; */
+  transform: translate(0, 20%);
+  overflow: hidden;
+}
+
+/* before stays, after moves */
+.activeCloud1::before, .activeCloud2::before, .activeCloud3::before, .activeCloud4::before, .activeCloud5::before, .activeCloud6::before, .activeCloud7::before, .activeCloud8::before{
+  content:"";
+  position: absolute;
+  top:70%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 50%;   
+  height: 10%;
+  /* border: 1px solid black; */
+  background: url(./pics/green.svg) 0%  no-repeat, url(./pics/green.svg) 25% no-repeat, url(./pics/green.svg) 50% no-repeat, url(./pics/green.svg) 75%  no-repeat, url(./pics/green.svg) 100%  no-repeat;
+  background-size: contain, contain, contain, contain, contain;  
+}
+.activeCloud1::after, .activeCloud2::after, .activeCloud3::after, .activeCloud4::after, .activeCloud5::after,  .activeCloud6::after, .activeCloud7::after, .activeCloud8::after {
+  content:"";
+  position: absolute;
+  top:70%;
+  right:25%;
+  transform: translateY(-50%);
+  width: 50%;   
+  height: 10%;
+  /* border: 1px solid black; */
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: activeCloud1AfterGoAway;
+  animation-delay:0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  /* animation-timing-function: steps(3, end); */
+  border-radius: 15px 15px 15px 15px;
+}
+
+.activeCloud1::after{
+animation-name: activeCloud1AfterGoAway;
+}
+
+.activeCloud2::after{
+  animation-name: activeCloud2AfterGoAway;
+  }
+.activeCloud3::after{
+animation-name: activeCloud3AfterGoAway;
+}
+
+.activeCloud4::after{
+  animation-name: activeCloud4AfterGoAway;
+}
+
+.activeCloud5::after{
+    animation-name: activeCloud5AfterGoAway;
+}
+
+.activeCloud6::after{
+  animation-name: activeCloud6AfterGoAway;
+}
+
+.activeCloud7::after{
+  animation-name: activeCloud7AfterGoAway;
+}
+
+.activeCloud8::after{
+  animation-name: activeCloud8AfterGoAway;
+}
+
+
+.cloudWrap1:hover, .cloudWrap2:hover, .cloudWrap3:hover, .cloudWrap4:hover, .cloudWrap5:hover, .cloudWrap6:hover, .cloudWrap7:hover, .cloudWrap8:hover, .centralFigureWrap:hover {
+  transform: translate(0, 20%);
+}
+
+
 
 .cloudWrap1{  
   left: 1vw;
-  transform: rotate(0deg) scaleX(-1);
   animation-delay: 17s;  
 }
 .cloudWrap2{  
   left: 11vw;
-  transform: rotate(0deg) scaleX(-1);
   animation-delay: 17.1s;  
 }
 
 .cloudWrap3{  
   left: 21vw;
-  transform: rotate(0deg) scaleX(-1);
   animation-delay: 17.2s; 
 }
 
 .cloudWrap4{  
   left: 30.5vw;
   top:1vh;
-  transform: rotate(0deg) scaleX(-1);
   animation-delay: 17.3s; 
 }
 
@@ -104,9 +315,11 @@ body{
    /* border: 2px solid red; */
 }
 
+
+
 .cloudLogoClass1, .cloudLogoClass2, .cloudLogoClass3, .cloudLogoClass4{
   width: 20%;
-  transform: translate(-50%, -50%) scaleX(-1);
+  transform: translate(-50%, -50%);
 }
 
 .cloudLogoClass2, .cloudLogoClass4 {
@@ -117,7 +330,7 @@ body{
   width: 40%;
 }
 
-.introAnimation{
+.daScroll{
   display: inline-flex;
   flex-direction: column;
   width: 80vw;
@@ -128,6 +341,63 @@ body{
   background-size: contain;
   background-position: center;
   font-size: 3vh;  
+}
+
+.arrow {
+  /* border: 1px solid red; */
+  transform: scaleX(-1);
+  /* height just like font size here */
+  height: 2.5vmin;
+  /* padding-left: 1vw;   */
+  margin-right: 5px; 
+
+}
+
+.bioColor{
+  color: green;
+  font-weight: bold;
+} 
+
+.emphasizeBioItem{
+  display: inline-flex;
+  color: red;
+  font-weight: bold;
+  /* do not remove white spaces */
+  white-space: pre;
+}
+
+.bioTextWrap{
+  margin-top: 1vh;
+  height: 85%;
+  font-family: 'Roboto Condensed', sans-serif;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.5vmin;  
+  justify-content: space-around;
+  justify-items: space-around;
+  width: 35vmin;
+  /* border: 1px solid green;  */
+}
+
+.bioTextTitleClass{
+  display: flex;  
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  /* border: 1px solid red; */
+  font-weight: bold;
+  font-family: 'Anton', sans-serif;
+}
+
+.bioTextClass{
+  /* display: flex; NO*/
+  /* needs to be inline in order for span emphasizeBioItem to work inline! */
+  display: inline;
+  align-self: flex-start;
+  width: 100%;
+  /* border: 1px solid blue;  */
 }
 
 .tekst1Class, .tekst2Class, .tekst3Class, .tekst4Class, .tekst5Class, .tekst6Class, .tekst7Class, .tekst8Class, .tekst9Class, .tekst10Class {
@@ -144,6 +414,7 @@ body{
 .tekst4Class{
   left: 50%;
   font-size: 0;
+  font-family: 'Anton', sans-serif;
 }
 
 .tekst1Class, .tekst3Class, .tekst5Class, .tekst6Class, .tekst7Class {
@@ -281,10 +552,74 @@ animation-delay: 8s;
 }
 
 @keyframes cloudBump {
-  0%{top:2vh;;}
+  0%{top:2vh;}
   50%{top:3vh;}
-  100%{top:2vh;}
-  
+  100%{top:2vh;}  
 }
 
+@keyframes activeCloud1AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 20%;
+  }
+}
+
+@keyframes activeCloud2AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 20%;
+  }
+}
+@keyframes activeCloud3AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 30%;
+  }
+}
+@keyframes activeCloud4AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 30%;
+  }
+}
+@keyframes activeCloud5AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 40%;
+  }
+}
+@keyframes activeCloud6AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 40%;
+  }
+}
+@keyframes activeCloud7AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 40%;
+  }
+}
+@keyframes activeCloud8AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 30%;
+  }
+}
 
