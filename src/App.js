@@ -8,7 +8,6 @@ import IntroAnimation from './components/IntroAnimation';
 import Bio from './components/Bio';
 import Contact from './components/Contact';
 import ContactIcon from './components/ContactIcon';
-import Tech from './components/Tech';
 import ErrorPage from './components/ErrorPage';
 import CloudsCloseBtn from './components/CloudsCloseBtn';
 
@@ -142,13 +141,12 @@ class App extends Component {
                 <NavLink to="/contact"><ContactIcon/></NavLink>
                 <NavLink to="/"><House/></NavLink>
                 <NavLink to="/bio"><Developer/></NavLink>
-                   {/* <Tech/> */}
+                   
                    <section className="mainSectionWrap">
                         <Switch>
                         <Route path="/" exact component={IntroAnimation} />
                         <Route path="/bio" component={Bio} />
                         <Route path="/contact" component={Contact} />
-                        <Route path="/tech" component={Tech} />
                         <Route component={ErrorPage}/>
                         </Switch>
                    </section>
