@@ -1,6 +1,5 @@
 import React from 'react';
 import svgArrow from '../pics/arrow.svg';
-import { NavLink } from 'react-router-dom';
 
 const Bio2 = props => {
   return (
