@@ -355,11 +355,16 @@ animation-name: activeCloud3AfterGoAway;
   position: absolute;
   left: 50%;
   bottom: 10%;
-  transform: translate(0%, 0%);
-  width: 9vmin;
-  height: 9vmin;
+  transform: translate(-20%, 50%);
+  width: 10vh;
+  height: 10vh;
   border-radius: 50%;
+  /* background-image: url(./pics/arrow.svg);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: center center; */
   /* border: 1px solid black; */
+  
 }
 
 .arrow {

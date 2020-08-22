@@ -8,7 +8,7 @@ const ErrorPage = props => {
     <NavLink to="/bio"><div className="redBlob"></div></NavLink>
         <div className="bioTextWrap">    
             <p className="bioTextTitleClass large">Gone fishing...</p>
-            <p className="bioTextTitleClass bioColor">I'll be back soon!</p>
+            <p className="bioTextTitleClass bioColor">Click my head and I'll be back!</p>
             <div className="astro"></div>
         </div>
     </div>
