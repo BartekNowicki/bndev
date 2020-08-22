@@ -145,6 +145,7 @@ class App extends Component {
                    
                    <section className="mainSectionWrap">
                         <Switch>
+                        <Route path="/bndev/" exact component={IntroAnimation} />
                         <Route path="/" exact component={IntroAnimation} />
                         <Route path="/bio" component={Bio} />
                         <Route path="/bio2" component={Bio2} />
