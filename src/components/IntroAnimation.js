@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const text1 = 'my name is';
 const text2 = 'Bartosz Nowicki';
@@ -15,6 +16,8 @@ const IntroAnimation = props => {
   return (
 	<>
   <div className="daScroll">
+  <NavLink to="/bio"><div className="redBlob"></div></NavLink>
+  
     <span className = "tekst1Class">{text1}</span>
     <span className = "tekst2Class">{text2}</span>
     <span className = "tekst3Class">{text3}</span>

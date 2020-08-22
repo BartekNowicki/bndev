@@ -58,12 +58,21 @@ body{
   /* border: 1px solid pink; */
 }
 
+.large {
+  font-size: 4vmin;
+}
+
+.small {
+  font-size: 2vmin;
+  text-align: center;
+}
+
 .contactIcon{
   position: fixed;
-  bottom: calc(1vw + 7vh + 1vw); 
+  bottom: calc(1vw + 12vh + 1vw); 
   right: 1vw;
-  width: 7vh;
-  height: 7vh;
+  width: 11vh;
+  height: 11vh;
   background-image: url(./pics/contacts.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -72,18 +81,14 @@ body{
   border-radius: 10px; 
 }
 
-.contactIcon:hover{
-  transform: scale(1,1) translate(-5px, -5px);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
+
 
 .houseIcon{
   position: fixed;
   bottom: 1vw;
   right: 1vw;
-  width: 7vh;
-  height: 7vh;
+  width: 10vh;
+  height: 10vh;
   background-image: url(./pics/house.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -92,11 +97,7 @@ body{
   border-radius: 10px; 
 }
 
-.houseIcon:hover{
-  transform: scale(1,1) translate(-5px, -5px);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
+
 
 .phoneIcon{
   width: 10vh;
@@ -148,11 +149,7 @@ transition: 0.3s ease;
 border-radius: 10px; 
 }
 
-.cloudsCloseBtn:hover{
-  transform: translate(-5px, -5px);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
+
 
 .cloudsCloseBtnImg{
   position: absolute;
@@ -259,9 +256,7 @@ animation-name: activeCloud3AfterGoAway;
 }
 
 
-.cloudWrap1:hover, .cloudWrap2:hover, .cloudWrap3:hover, .cloudWrap4:hover, .cloudWrap5:hover, .cloudWrap6:hover, .cloudWrap7:hover, .cloudWrap8:hover, .centralFigureWrap:hover {
-  transform: translate(0, 20%);
-}
+
 
 
 
@@ -343,6 +338,30 @@ animation-name: activeCloud3AfterGoAway;
   font-size: 3vh;  
 }
 
+.daScrollNoBlob{
+  display: inline-flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 70vh;
+  /* border: 1px solid black; */
+  background-image: url(./pics/scrollNoBlob.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  font-size: 3vh;  
+}
+
+.redBlob{
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(0%, 0%);
+  width: 9vmin;
+  height: 9vmin;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+}
+
 .arrow {
   /* border: 1px solid red; */
   transform: scaleX(-1);
@@ -389,6 +408,7 @@ animation-name: activeCloud3AfterGoAway;
   /* border: 1px solid red; */
   font-weight: bold;
   font-family: 'Anton', sans-serif;
+  margin-top: 2vh;
 }
 
 .bioTextClass{
@@ -623,3 +643,39 @@ animation-delay: 8s;
   }
 }
 
+/* ------------------------------------------------------------------------- */
+/* media */
+/* ------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1024px) {
+
+
+}
+/* END @media only screen and (max-width: 1024px) */
+
+
+@media only screen and (min-width: 1024px) {
+  
+.contactIcon:hover{
+  transform: scale(1,1) translate(-5px, -5px);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.houseIcon:hover{
+  transform: scale(1,1) translate(-5px, -5px);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.cloudsCloseBtn:hover{
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.cloudWrap1:hover, .cloudWrap2:hover, .cloudWrap3:hover, .cloudWrap4:hover, .cloudWrap5:hover, .cloudWrap6:hover, .cloudWrap7:hover, .cloudWrap8:hover, .centralFigureWrap:hover {
+  transform: translate(0, 20%);
+}
+} 
+/* END @media only screen and (min-width: 1024px) { */

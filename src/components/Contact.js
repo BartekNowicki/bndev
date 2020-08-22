@@ -1,9 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Contact = props => {
   return (
 	<>
     <div className="daScroll">
+    <NavLink to="/bio"><div className="redBlob"></div></NavLink>
         <div className="bioTextWrap">    
             <p className="bioTextTitleClass large">Nowicki, Bartek</p>
             <p className="bioTextTitleClass bioColor">at your service!</p>

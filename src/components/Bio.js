@@ -1,10 +1,12 @@
 import React from 'react';
 import svgArrow from '../pics/arrow.svg';
+import { NavLink } from 'react-router-dom';
 
 const Bio = props => {
   return (
 	<>
     <div className="daScroll">
+        <NavLink to="/bio2"><div className="redBlob"></div></NavLink>
         <div className="bioTextWrap">
     
             <p className="bioTextTitleClass">Are you looking to hire </p>

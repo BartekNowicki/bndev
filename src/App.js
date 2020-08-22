@@ -6,6 +6,7 @@ import House from './components/House';
 import Developer from './components/Developer';
 import IntroAnimation from './components/IntroAnimation';
 import Bio from './components/Bio';
+import Bio2 from './components/Bio2';
 import Contact from './components/Contact';
 import ContactIcon from './components/ContactIcon';
 import ErrorPage from './components/ErrorPage';
@@ -146,6 +147,7 @@ class App extends Component {
                         <Switch>
                         <Route path="/" exact component={IntroAnimation} />
                         <Route path="/bio" component={Bio} />
+                        <Route path="/bio2" component={Bio2} />
                         <Route path="/contact" component={Contact} />
                         <Route component={ErrorPage}/>
                         </Switch>
