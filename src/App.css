@@ -52,6 +52,14 @@ body{
   background-size: contain;
 }
 
+.loader{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: start;
+}
+
 .mainSectionWrap{
   width: 80vw;
   height: 70vh;
@@ -254,11 +262,6 @@ animation-name: activeCloud3AfterGoAway;
 .activeCloud8::after{
   animation-name: activeCloud8AfterGoAway;
 }
-
-
-
-
-
 
 .cloudWrap1{  
   left: 1vw;
@@ -520,7 +523,9 @@ animation-name: activeCloud3AfterGoAway;
 }
 
 .innerSpanForCodeAnimationtekst7::after{
-background-color:#D9D2B8;
+/* background-color:#D9D2B8;  */
+background-color:#d8d1b7; 
+
 animation-duration: 1.75s;
 animation-timing-function: steps(14, end);
 animation-delay: 8s;
@@ -534,14 +539,18 @@ animation-delay: 8s;
 }
 
 .innerSpanForCodeAnimationtekst9::after{
-  background-color:#D6CFB5;
+  /* background-color:#D6CFB5; */
+  background-color:#d8d1b7;
+  
   animation-duration: 2.625s;
   animation-timing-function: steps(21, end);
   animation-delay: 13.75s;
 }
 
 .innerSpanForCodeAnimationtekst10::after{
-  background-color:#D4CAAF;
+  /* background-color:#D4CAAF; */
+  background-color:#d6cfb5fb;
+  
   animation-duration: 0.375s;
   animation-timing-function: steps(3, end);
   animation-delay: 16.375s;

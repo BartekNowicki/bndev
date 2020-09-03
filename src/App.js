@@ -11,9 +11,11 @@ import Contact from './components/Contact';
 import ContactIcon from './components/ContactIcon';
 import ErrorPage from './components/ErrorPage';
 import CloudsCloseBtn from './components/CloudsCloseBtn';
+import Loader from './components/Loader';
 
 class App extends Component {
     state = {
+      isAllLoaded : false,
       isAnyCloudActive : false,
       
       cloudData: [{
@@ -110,7 +112,8 @@ class App extends Component {
 
 
     componentDidMount(){
-      console.log('apka zmontowana');      
+      console.log('The mounting is complete.');
+      if (!this.state.isAllLoaded) this.setState({isAllLoaded: true})
     }
 
     componentDidUpdate(){
@@ -123,17 +126,17 @@ class App extends Component {
 
     checkIfAnyCloudActive = () => {
       if (this.state.cloudData.filter(item => item.isClicked).length > 0){   
-        console.log('jest aktywna chmurka!');     
+        console.log('we have an active cloud or two!');     
         return true;
       }
-      console.log('nie ma aktywnej chmurki...');
+      console.log('no active clouds found...');
       return false;
     }
    
     render(){ 
- 
-                  
-    return (
+      if (!this.state.isAllLoaded) {
+        return <Loader/>
+      } else return (
         <>
         <Router>
           <div className="pageWrap">
