@@ -24,6 +24,26 @@ body{
   /* border: 1px solid black; */
 }
 
+.mobileSwipe{
+  position:fixed;
+  left:0;
+  top:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 100%;
+  /* border: 1px solid black; */
+  background-color: rgb(255, 145, 0);
+  background-image: url(./pics/swipe.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  
+  z-index:99;
+}
+
 .centralFigureWrap{
   /* relative for the bow-tie */
   position: relative;
@@ -663,7 +683,6 @@ animation-delay: 8s;
 
 @media only screen and (max-width: 1024px) {
 
-
 }
 /* END @media only screen and (max-width: 1024px) */
 
@@ -692,4 +711,12 @@ animation-delay: 8s;
   transform: translate(0, 20%);
 }
 } 
-/* END @media only screen and (min-width: 1024px) { */
+/* END @media only screen and (min-width: 1024px) */
+
+@media only screen and (min-width: 641px) {
+  
+  .mobileSwipe {
+    display: none;
+  }
+
+}/* END @media only screen and (max-width: 799px) */

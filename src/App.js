@@ -12,10 +12,13 @@ import ContactIcon from './components/ContactIcon';
 import ErrorPage from './components/ErrorPage';
 import CloudsCloseBtn from './components/CloudsCloseBtn';
 import Loader from './components/Loader';
+import SwipeIfMobile from './components/SwipeIfMobile';
+
 
 class App extends Component {
     state = {
       isAllLoaded : false,
+      isSwiped : false,
       isAnyCloudActive : false,
       
       cloudData: [{
@@ -99,6 +102,11 @@ class App extends Component {
         { cloudData : cloudDataCopyUpdated,
         }));
     }
+
+    handleSwipe = () => {
+      console.log('SWIPE!');
+      this.setState(prevState => ({ isSwiped : true, }));
+    }
     
     handleCloudCloseClick = () => {
       const cloudDataCopy = [...this.state.cloudData];      
@@ -108,8 +116,6 @@ class App extends Component {
         { cloudData : cloudDataCopyUpdated,
         }));
     }
-
-
 
     componentDidMount(){
       console.log('The mounting is complete.');
@@ -131,13 +137,14 @@ class App extends Component {
       }
       console.log('no active clouds found...');
       return false;
-    }
+    }    
    
     render(){ 
       if (!this.state.isAllLoaded) {
         return <Loader/>
       } else return (
         <>
+        {!this.state.isSwiped && <SwipeIfMobile swipeHandler = {this.handleSwipe}/>}
         <Router>
           <div className="pageWrap">
                 <Clouds data = {this.state.cloudData} handleCloudClick = {this.handleCloudClick}/>
