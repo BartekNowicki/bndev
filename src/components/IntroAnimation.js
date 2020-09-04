@@ -13,14 +13,15 @@ const text9 = `console.log("hired!")`;
 const text10 = `});`;
 
 const IntroAnimation = props => {
+  const shouldIstartAnimations = props;
   return (
 	<>
   <div className="daScroll">
   <NavLink to="/bio"><div className="redBlob"></div></NavLink>
   
     <span className = "tekst1Class">{text1}</span>
-    <span className = "tekst2Class">{text2}</span>
-    <span className = "tekst3Class">{text3}</span>
+    <span className = {shouldIstartAnimations ? "tekst2Class" : "tekst2Class animationPaused"} >{text2}</span>    
+    <span className = "tekst3Class">{text3}</span>    
     <span className = "tekst4Class">{text4}</span>
     <span className = "tekst5Class">{text5}</span>
     <span className = "tekst6Class">{text6}</span>

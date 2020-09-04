@@ -119,27 +119,46 @@ class App extends Component {
 
     componentDidMount(){
       console.log('The mounting is complete.');
-      if (!this.state.isAllLoaded) this.setState({isAllLoaded: true})
+      
+      window.addEventListener('load', () => {
+        if (!this.state.isAllLoaded) this.setState({isAllLoaded: true});
+        this.removeSwipeIfNotMobile();
+      });
     }
 
     componentDidUpdate(){
         if (this.checkIfAnyCloudActive()) {
-        // console.log('warunkowa zmiana state na isAnyCloudActive = true');
-        if (!this.state.isAnyCloudActive) this.setState({isAnyCloudActive: true})
-    } else {
-      if (this.state.isAnyCloudActive) this.setState({isAnyCloudActive: false})}
+           if (!this.state.isAnyCloudActive) this.setState({isAnyCloudActive: true})
+        } else {
+           if (this.state.isAnyCloudActive) this.setState({isAnyCloudActive: false})}
     }
 
     checkIfAnyCloudActive = () => {
       if (this.state.cloudData.filter(item => item.isClicked).length > 0){   
-        console.log('we have an active cloud or two!');     
+        // console.log('we have an active cloud or two!');     
         return true;
       }
-      console.log('no active clouds found...');
+      // console.log('no active clouds found...');
       return false;
-    }    
+    }   
+    
+    removeSwipeIfNotMobile = () => {
+      console.log('trying to remove swipe if this is not a mobile device');
+      const checkedElement = document.querySelector('.mobileSwipe');
+      if (checkedElement) {
+        // console.log('checkedElement: ', checkedElement);
+        const SwipeVisibility = window.getComputedStyle(checkedElement).getPropertyValue('display');
+        // console.log('SwipeVisibility: ', SwipeVisibility);
+        if (SwipeVisibility === 'none') {
+          console.log('swipe exists but is invisible - this is a desktop - performing virtual swipe');
+          this.handleSwipe();
+        }
+      } else console.log('swipe is gone...');
+    };
+    
    
     render(){ 
+    
       if (!this.state.isAllLoaded) {
         return <Loader/>
       } else return (
@@ -151,12 +170,12 @@ class App extends Component {
                 {this.state.isAnyCloudActive && <CloudsCloseBtn handleCloudCloseClick = {this.handleCloudCloseClick}/>}
                 <NavLink to="/contact"><ContactIcon/></NavLink>
                 <NavLink to="/"><House/></NavLink>
-                <NavLink to="/bio"><Developer/></NavLink>
+                <NavLink to="/bio"><Developer/></NavLink>                
                    
                    <section className="mainSectionWrap">
                         <Switch>
-                        <Route path="/bndev/" exact component={IntroAnimation} />
-                        <Route path="/" exact component={IntroAnimation} />
+                        <Route path="/bndev/" exact component={()=> IntroAnimation(this.state.isSwiped)} />
+                        <Route path="/" exact component={()=> IntroAnimation(this.state.isSwiped)} />
                         <Route path="/bio" component={Bio} />
                         <Route path="/bio2" component={Bio2} />
                         <Route path="/contact" component={Contact} />
