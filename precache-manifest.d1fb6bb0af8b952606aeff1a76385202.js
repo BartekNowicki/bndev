@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46c94d5aa39dbdd427bb7f0d6eaa6726",
+    "revision": "03a81242f9634f1bbed50e4b371cf96b",
     "url": "/bndev/index.html"
   },
   {
-    "revision": "f0e55bbdebf149412ab0",
-    "url": "/bndev/static/css/main.ecea89ec.chunk.css"
+    "revision": "830ba3730753a9de8c65",
+    "url": "/bndev/static/css/main.7b274d20.chunk.css"
   },
   {
     "revision": "027ef11a8529e7316476",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bndev/static/js/2.fa98582f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f0e55bbdebf149412ab0",
-    "url": "/bndev/static/js/main.c4e8c7c8.chunk.js"
+    "revision": "830ba3730753a9de8c65",
+    "url": "/bndev/static/js/main.5389e705.chunk.js"
   },
   {
     "revision": "b859aa736c0bda36bbc1",
@@ -98,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f3dce133d812217b063ce21716355285",
     "url": "/bndev/static/media/svg.f3dce133.svg"
+  },
+  {
+    "revision": "03532cdcd4ae8757845d7d48b13e8540",
+    "url": "/bndev/static/media/swipe.03532cdc.svg"
   },
   {
     "revision": "7740ac7156721c054a41320a5aa151ec",
