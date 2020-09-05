@@ -13,6 +13,10 @@ import ErrorPage from './components/ErrorPage';
 import CloudsCloseBtn from './components/CloudsCloseBtn';
 import Loader from './components/Loader';
 import SwipeIfMobile from './components/SwipeIfMobile';
+import Baloon from './components/Baloon';
+// import svgArrow from '../pics/arrow.svg';
+
+
 
 
 class App extends Component {
@@ -20,6 +24,7 @@ class App extends Component {
       isAllLoaded : false,
       isSwiped : false,
       isAnyCloudActive : false,
+      isDeviceMobile: false,
       
       cloudData: [{
         id: 1,
@@ -118,9 +123,15 @@ class App extends Component {
     }
 
     componentDidMount(){
-      console.log('The mounting is complete.');
-      
+      console.log('The mounting is complete.');      
       window.addEventListener('load', () => {
+        if (!this.state.isAllLoaded) this.setState({isAllLoaded: true});
+        this.removeSwipeIfNotMobile();
+      });
+    }
+
+    componentWillUnmount() {            
+      window.removeEventListener('load', () => {
         if (!this.state.isAllLoaded) this.setState({isAllLoaded: true});
         this.removeSwipeIfNotMobile();
       });
@@ -140,20 +151,28 @@ class App extends Component {
       }
       // console.log('no active clouds found...');
       return false;
-    }   
+    }  
     
-    removeSwipeIfNotMobile = () => {
-      console.log('trying to remove swipe if this is not a mobile device');
+    checkIfMobileDevice = () => {
       const checkedElement = document.querySelector('.mobileSwipe');
       if (checkedElement) {
         // console.log('checkedElement: ', checkedElement);
         const SwipeVisibility = window.getComputedStyle(checkedElement).getPropertyValue('display');
         // console.log('SwipeVisibility: ', SwipeVisibility);
         if (SwipeVisibility === 'none') {
-          console.log('swipe exists but is invisible - this is a desktop - performing virtual swipe');
-          this.handleSwipe();
+          console.log('swipe exists but is invisible - this is a desktop');
+          this.setState({isDeviceMobile: true});
         }
-      } else console.log('swipe is gone...');
+    }
+    } 
+    
+    removeSwipeIfNotMobile = () => {
+      console.log('trying to remove swipe if this is not a mobile device');
+      this.checkIfMobileDevice();
+      if (this.state.isDeviceMobile) {
+          console.log('performing virtual swipe');
+          this.handleSwipe();
+      }
     };
     
    
@@ -164,6 +183,14 @@ class App extends Component {
       } else return (
         <>
         {!this.state.isSwiped && <SwipeIfMobile swipeHandler = {this.handleSwipe}/>}
+        <div className="baloonArea">
+              <Baloon className = "baloon1" ratioX = "0.1" ratioY = "0.7"/>
+              <Baloon className = "baloon2" ratioX = "0.2" ratioY = "0.5"/>
+              <Baloon className = "baloon3" ratioX = "0.3" ratioY = "0.3"/>
+              <Baloon className = "baloon4" ratioX = "0.4" ratioY = "0.2"/>
+              <Baloon className = "baloon5" ratioX = "0.5" ratioY = "0.1"/>
+        </div>
+        
         <Router>
           <div className="pageWrap">
                 <Clouds data = {this.state.cloudData} handleCloudClick = {this.handleCloudClick}/>

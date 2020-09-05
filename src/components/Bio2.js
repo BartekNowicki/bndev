@@ -10,14 +10,14 @@ const Bio2 = props => {
     
             <p className="bioTextTitleClass">When coding I ...</p>
             <p className="bioTextTitleClass bioColor">Aim for</p>
-            <p className="bioTextClass"><img src={svgArrow} className="arrow"/>clean self-explanatory code</p>
-            <p className="bioTextClass"><img src={svgArrow} className="arrow"/>accounting for all edge cases</p>
-            <p className="bioTextClass"><img src={svgArrow} className="arrow"/>responsive design</p>
-            <p className="bioTextClass"><img src={svgArrow} className="arrow"/>pleasing UX</p>
+            <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>clean self-explanatory code</p>
+            <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>accounting for all edge cases</p>
+            <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>responsive design</p>
+            <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>pleasing UX</p>
             <p className="bioTextTitleClass bioColor">Enjoy the most</p>
-            <p className="bioTextClass"><img src={svgArrow} className="arrow"/>css tricks, effects and animations</p>
-            <p className="bioTextClass"><img src={svgArrow} className="arrow"/>the power behind ES6 JS</p>
-            <p className="bioTextClass"><img src={svgArrow} className="arrow"/>art and creativity</p>
+            <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>css tricks, effects and animations</p>
+            <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>the power behind ES6 JS</p>
+            <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>art and creativity</p>
             <p className="bioTextTitleClass">I am currently working on</p>
             {/* <p className="bioTextClass small">https://www.konferencyjni.pl/</p>
             <p className="bioTextClass small">https://barteknowicki.github.io/OlgaTlumaczy/</p> */}
