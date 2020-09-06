@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bndev/static/css/main.f1bf90d0.chunk.css",
+    "main.css": "/bndev/static/css/main.febaa421.chunk.css",
     "main.js": "/bndev/static/js/main.8ab8897c.chunk.js",
     "main.js.map": "/bndev/static/js/main.8ab8897c.chunk.js.map",
     "runtime-main.js": "/bndev/static/js/runtime-main.af0fa032.js",
@@ -8,9 +8,9 @@
     "static/js/2.4431add0.chunk.js": "/bndev/static/js/2.4431add0.chunk.js",
     "static/js/2.4431add0.chunk.js.map": "/bndev/static/js/2.4431add0.chunk.js.map",
     "index.html": "/bndev/index.html",
-    "precache-manifest.1882edea77fb4de4537fe4e56820e110.js": "/bndev/precache-manifest.1882edea77fb4de4537fe4e56820e110.js",
+    "precache-manifest.5e441ac5b042d4e7c9fd8d4339b685c6.js": "/bndev/precache-manifest.5e441ac5b042d4e7c9fd8d4339b685c6.js",
     "service-worker.js": "/bndev/service-worker.js",
-    "static/css/main.f1bf90d0.chunk.css.map": "/bndev/static/css/main.f1bf90d0.chunk.css.map",
+    "static/css/main.febaa421.chunk.css.map": "/bndev/static/css/main.febaa421.chunk.css.map",
     "static/js/2.4431add0.chunk.js.LICENSE.txt": "/bndev/static/js/2.4431add0.chunk.js.LICENSE.txt",
     "static/media/App.css": "/bndev/static/media/write.53b662cc.svg",
     "static/media/arrow.svg": "/bndev/static/media/arrow.5f03f27f.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.af0fa032.js",
     "static/js/2.4431add0.chunk.js",
-    "static/css/main.f1bf90d0.chunk.css",
+    "static/css/main.febaa421.chunk.css",
     "static/js/main.8ab8897c.chunk.js"
   ]
 }
