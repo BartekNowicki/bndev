@@ -14,10 +14,6 @@ import CloudsCloseBtn from './components/CloudsCloseBtn';
 import Loader from './components/Loader';
 import SwipeIfMobile from './components/SwipeIfMobile';
 import Baloon from './components/Baloon';
-// import svgArrow from '../pics/arrow.svg';
-
-
-
 
 class App extends Component {
     state = {
@@ -25,7 +21,7 @@ class App extends Component {
       isSwiped : false,
       isAnyCloudActive : false,
       isDeviceMobile: false,
-      
+      throttleIntroAnimations: true,      
       cloudData: [{
         id: 1,
         cloudClass : 'cloudWrap1',
@@ -95,7 +91,7 @@ class App extends Component {
 
     //mark the cloud as clicked
     handleCloudClick = (cloudId) => {
-      console.log('click: ', cloudId);
+      // console.log('click: ', cloudId);
       const cloudDataCopy = [...this.state.cloudData];      
       cloudDataCopy.forEach(item => {
         if(item.id === cloudId) {
@@ -105,12 +101,13 @@ class App extends Component {
       const cloudDataCopyUpdated = cloudDataCopy;
       this.setState(prevState => (
         { cloudData : cloudDataCopyUpdated,
+          throttleIntroAnimations: true,
         }));
     }
 
     handleSwipe = () => {
-      console.log('SWIPE!');
-      this.setState(prevState => ({ isSwiped : true, }));
+      // console.log('SWIPE!');
+      this.setState(prevState => ({ isSwiped : true, throttleIntroAnimations: false }));
     }
     
     handleCloudCloseClick = () => {
@@ -177,18 +174,18 @@ class App extends Component {
     
    
     render(){ 
-    
+
       if (!this.state.isAllLoaded) {
         return <Loader/>
       } else return (
         <>
         {!this.state.isSwiped && <SwipeIfMobile swipeHandler = {this.handleSwipe}/>}
         <div className="baloonArea">
-              <Baloon className = "baloon1" ratioX = "0.1" ratioY = "0.7"/>
-              <Baloon className = "baloon2" ratioX = "0.2" ratioY = "0.5"/>
-              <Baloon className = "baloon3" ratioX = "0.3" ratioY = "0.3"/>
-              <Baloon className = "baloon4" ratioX = "0.4" ratioY = "0.2"/>
-              <Baloon className = "baloon5" ratioX = "0.5" ratioY = "0.1"/>
+              <Baloon className = "baloon1" ratioX = "0.2" ratioY = "0.9"/>
+              <Baloon className = "baloon2" ratioX = "0.4" ratioY = "0.8"/>
+              <Baloon className = "baloon3" ratioX = "0.6" ratioY = "0.6"/>
+              <Baloon className = "baloon4" ratioX = "0.8" ratioY = "0.4"/>
+              <Baloon className = "baloon5" ratioX = "0.9" ratioY = "0.2"/>
         </div>
         
         <Router>
@@ -201,8 +198,8 @@ class App extends Component {
                    
                    <section className="mainSectionWrap">
                         <Switch>
-                        <Route path="/bndev/" exact component={()=> IntroAnimation(this.state.isSwiped)} />
-                        <Route path="/" exact component={()=> IntroAnimation(this.state.isSwiped)} />
+                        <Route path="/bndev/" exact component={()=> IntroAnimation([this.state.isSwiped, !this.state.throttleIntroAnimations])} />
+                        <Route path="/" exact component={()=> IntroAnimation([this.state.isSwiped, !this.state.throttleIntroAnimations])} />
                         <Route path="/bio" component={Bio} />
                         <Route path="/bio2" component={Bio2} />
                         <Route path="/contact" component={Contact} />

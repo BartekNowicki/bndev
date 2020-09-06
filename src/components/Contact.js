@@ -5,10 +5,10 @@ const Contact = props => {
   return (
 	<>
     <div className="daScroll">
-    <NavLink to="/bio"><div className="redBlob"></div></NavLink>
-        <div className="bioTextWrap">    
+    
+        <div className="contactTextWrap">    
             <p className="bioTextTitleClass large">Nowicki, Bartek</p>
-            <p className="bioTextTitleClass bioColor">at your service!</p>
+            <p className="bioTextTitleClass bioColor contactDetails">at your service!</p>
             <div className="phoneIcon"></div>
             <p className="bioTextTitleClass contactDetails">( +48 )  605 - 769 - 837</p>
             <div className="writeIcon"></div>

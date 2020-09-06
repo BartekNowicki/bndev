@@ -4,7 +4,7 @@ import svgArrow from '../pics/arrow.svg';
 const Bio2 = props => {
   return (
 	<>
-    <div className="daScrollNoBlob">
+    <div className="daScroll">
         
         <div className="bioTextWrap">
     
@@ -18,6 +18,9 @@ const Bio2 = props => {
             <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>css tricks, effects and animations</p>
             <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>the power behind ES6 JS</p>
             <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>art and creativity</p>
+
+            <p className="bioTextTitleClass bioColorRed">Reach out and let's talk!</p>
+
             <p className="bioTextTitleClass">I am currently working on</p>
             {/* <p className="bioTextClass small">https://www.konferencyjni.pl/</p>
             <p className="bioTextClass small">https://barteknowicki.github.io/OlgaTlumaczy/</p> */}

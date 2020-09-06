@@ -6,7 +6,7 @@ const Bio = props => {
   return (
 	<>
     <div className="daScroll">
-        <NavLink to="/bio2"><div className="redBlob"></div></NavLink>
+        
         <div className="bioTextWrap">
     
             <p className="bioTextTitleClass">Are you looking to hire </p>            
@@ -24,7 +24,8 @@ const Bio = props => {
             <p className="bioTextClass"><img src={svgArrow} className="arrow" alt=""/>has a passion for coding and web dev</p>
             <p className="bioTextClass"><img src={svgArrow} className="arrow" alt=""/>is internally motivated with a drive to deliver</p>
             <p className="bioTextClass"><img src={svgArrow} className="arrow" alt=""/>appreciates a sense of humor</p>
-            <p className="bioTextTitleClass bioColor">reach out and let's talk!</p>
+            
+            <NavLink to="/bio2"><p className="moreBio">more...</p></NavLink>
         </div>
     </div>
   </>

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+a, a:hover, a:active {
+  text-decoration: none;
+}
+
 body{
   background-color: rgb(255, 145, 0);
   display: flex;
@@ -40,7 +44,6 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  
   z-index:99;
 }
 
@@ -49,13 +52,12 @@ body{
   position: relative;
   width:15vh;
   height: 15vh;
-  
-  /* border: 1px solid blue; */
   background-image: url(./pics/BartoszNowicki.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   transition: 0.5s;
+  /* border: 1px solid blue; */
 }
 
 .centralFigureBowtieWrap{
@@ -82,9 +84,10 @@ body{
 }
 
 .mainSectionWrap{
-  width: 80vw;
+  /* width: 80vw; */
+  width: auto;
   height: 70vh;
-  /* border: 1px solid pink; */
+  /* border: 3px solid pink; */
 }
 
 .large {
@@ -110,8 +113,6 @@ body{
   border-radius: 10px; 
 }
 
-
-
 .houseIcon{
   position: fixed;
   bottom: 1vw;
@@ -126,14 +127,13 @@ body{
   border-radius: 10px; 
 }
 
-
-
 .phoneIcon{
   width: 10vh;
   height: 10vh;
   background-image: url(./pics/phone.svg);
+  background-repeat: no-repeat;
   background-position: center center;
-  background-size: 130%;
+  margin-top: 5vh; 
   transition: 0.3s ease;
   border-radius: 10px; 
   /* border: 1px solid black; */
@@ -150,7 +150,7 @@ body{
 }
 
 .contactDetails {
-  font-size: 3vh;
+  font-size: 2vh;
   white-space: nowrap;
 }
 
@@ -173,12 +173,10 @@ height: 10vh;
 background-image: url(./pics/thoughtCloudRight.svg);
 background-repeat: no-repeat;
 background-size: contain;
-/* border: 1px solid red; */
 transition: 0.3s ease;
 border-radius: 10px; 
+/* border: 1px solid red; */
 }
-
-
 
 .cloudsCloseBtnImg{
   position: absolute;
@@ -188,7 +186,6 @@ border-radius: 10px;
   width: 30%;
   height: 30%;
 }
-
 
 .cloudWrap1, .cloudWrap2, .cloudWrap3, .cloudWrap4 {
 background-image: url(./pics/thoughtCloudRight.svg);
@@ -334,8 +331,6 @@ animation-name: activeCloud3AfterGoAway;
    /* border: 2px solid red; */
 }
 
-
-
 .cloudLogoClass1, .cloudLogoClass2, .cloudLogoClass3, .cloudLogoClass4{
   width: 20%;
   transform: translate(-50%, -50%);
@@ -349,82 +344,83 @@ animation-name: activeCloud3AfterGoAway;
   width: 40%;
 }
 
-.daScroll{
-  display: inline-flex;
+.daScroll { 
+  display: flex;
   flex-direction: column;
-  width: 80vw;
-  height: 70vh;
-  /* border: 1px solid black; */
-  background-image: url(./pics/scroll.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  font-size: 3vh;  
-}
-
-.daScrollNoBlob{
-  display: inline-flex;
-  flex-direction: column;
-  width: 80vw;
-  height: 70vh;
-  /* border: 1px solid black; */
+  padding: 0 10vw;
+  padding-bottom: 10vw;
+  width: auto;
+  height: 100%;
   background-image: url(./pics/scrollNoBlob.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
-  font-size: 3vh;  
+  background-position: center top;
+  font-size: 3vh;
+  /* border: 1px solid blue; */
 }
 
-.redBlob{
-  position: absolute;
-  left: 50%;
-  bottom: 10%;
-  transform: translate(-20%, 50%);
-  width: 10vh;
-  height: 10vh;
-  border-radius: 50%;
-  /* background-image: url(./pics/arrow.svg);
-  background-size: 10px 10px;
-  background-repeat: no-repeat;
-  background-position: center center; */
+.typeWrap {
+  display: flex;
+  flex-direction: column;
+  width: auto;
   /* border: 1px solid black; */
-  
+}
+
+.moreBio {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 3px;
+  color: rgb(122, 3, 3);
+  text-decoration: none;
 }
 
 .arrow {
-  /* border: 1px solid red; */
   transform: scaleX(-1);
   /* height just like font size here */
   height: 2.5vmin;
-  /* padding-left: 1vw;   */
-  margin-right: 5px; 
-
+  margin-right: 5px;
+  /* border: 1px solid red; */
 }
 
-.bioColor{
+.contactTextWrap {
+  height: auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 5vmin;  
+  justify-content: space-between;
+  justify-items: space-between;
+  /* border: 1px solid green;  */
+}
+
+
+.bioColor {
   color: green;
   font-weight: bold;
 } 
 
+.bioColorRed {
+  color: red;
+  font-weight: bold;
+}
+
 .emphasizeBioItem{
-  display: inline-flex;
+  /* display: inline-flex; */
   color: red;
   font-weight: bold;
   /* do not remove white spaces */
   white-space: pre;
 }
 
-.bioTextWrap{
-  margin-top: 1vh;
-  height: 85%;
+.bioTextWrap {
+  height: auto;
   font-family: 'Roboto Condensed', sans-serif;
-  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 2.5vmin;  
-  justify-content: space-around;
-  justify-items: space-around;
   width: 35vmin;
   /* border: 1px solid green;  */
 }
@@ -434,10 +430,10 @@ animation-name: activeCloud3AfterGoAway;
   justify-content: center;
   align-self: center;
   width: 100%;
-  /* border: 1px solid red; */
   font-weight: bold;
   font-family: 'Anton', sans-serif;
   margin-top: 2vh;
+   /* border: 1px solid red; */
 }
 
 .bioTextClass{
@@ -445,25 +441,21 @@ animation-name: activeCloud3AfterGoAway;
   /* needs to be inline in order for span emphasizeBioItem to work inline! */
   display: inline;
   align-self: flex-start;
+  /* width: 100%; for links to external websites to  be centered */
   width: 100%;
   /* border: 1px solid blue;  */
 }
 
 .tekst1Class, .tekst2Class, .tekst3Class, .tekst4Class, .tekst5Class, .tekst6Class, .tekst7Class, .tekst8Class, .tekst9Class, .tekst10Class {
-  display: inline-flex;
+  /* display: inline-flex; */
+  display: flex;  
   position: relative;
   left: -100%;
-  padding: 0.5vh 2vw;
-  /* display: flex; */
+  padding: 0.5vh 1vw;
   justify-content: center;
-  width: 70%;
-  /* border: 1px solid green;  */
-}
-
-.tekst4Class{
-  left: 50%;
-  font-size: 0;
-  font-family: 'Anton', sans-serif;
+  justify-content: center;
+  width: auto;
+  /* border: 1px solid rgb(117, 0, 128); */
 }
 
 .tekst1Class, .tekst3Class, .tekst5Class, .tekst6Class, .tekst7Class {
@@ -472,17 +464,15 @@ animation-name: activeCloud3AfterGoAway;
   transform: translateX(-50%);
 }
 
-.tekst1Class{
-  /* border: 1px solid gray;     */
-  padding-top: 2vh;
-}
-
-.tekst2Class{
+/* .tekst1Class{} */
+ 
+.tekst2Class{  
+  left: 50%;
   font-family: 'Caveat', cursive;
   font-size: 3.5vh;
   /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
-  animation-name: tekst1Animation;
+  /* animation: tekst2Animation 15s infinite; */
+  animation-name: tekst2Animation;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-duration: 3s;
@@ -491,39 +481,43 @@ animation-name: activeCloud3AfterGoAway;
   /* border: 1px solid gray;     */
 }
 
-.tekst3Class {}
+/* .tekst3Class {} */
+
 .tekst4Class{
   /* duration, delay,iterations. */
-  /* animation: tekst1Animation 15s infinite; */
   animation-name: tekst4AnimationJunior;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-duration: 3s;
   animation-delay: 4s;
-  transform: translateX(-50%);
+  left: 50%;
+  font-family: 'Anton', sans-serif;
+  font-size: 3vh;
+  color: rgb(197, 8, 8);
+  transform: translateX(-50%) rotate(350deg);
   /* border: 1px solid gray;     */
 }
-.tekst5Class{}
-.tekst6Class{}
+/* .tekst5Class{} */
+
+/* .tekst6Class{} */
 
 .tekst7Class, .tekst8Class, .tekst9Class, .tekst10Class {
   font-family: 'VT323', monospace;
   transform: translateX(-50%);
   left: 50%;
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 2.5vh;
 }
 
-.tekst7Class{
-  /* border: 1px solid rgb(228, 24, 24); */
-}
+/* .tekst7Class {} */
 
-.tekst8Class{
-  /* border: 1px solid gray;     */
-}
-.tekst9Class{
-  /* border: 1px solid gray;     */
-}
+/* .tekst8Class {} */
+
+/* .tekst9Class {} */
+
 .tekst10Class{
-  padding-bottom: 30px;
+  padding-bottom: 2vh;
 }
   
 .innerSpanForCodeAnimationtekst7, .innerSpanForCodeAnimationtekst8, .innerSpanForCodeAnimationtekst9, .innerSpanForCodeAnimationtekst10 {
@@ -536,43 +530,40 @@ animation-name: activeCloud3AfterGoAway;
   content:"";
   position: absolute;
   top:0;
-  left:0;  
+  /* left:0;   */
+  left:100%;
   width: 100%;   
   height: 100%;
   animation-name: showCodeTekst;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  /* border: 1px solid yellowgreen; */
 }
 
 .innerSpanForCodeAnimationtekst7::after{
 /* background-color:#D9D2B8;  */
-background-color:#d8d1b7; 
-
+background-color: rgba(0, 0, 0, 1);
 animation-duration: 1.75s;
 animation-timing-function: steps(14, end);
 animation-delay: 8s;
 }
 
 .innerSpanForCodeAnimationtekst8::after{
-  background-color:#D9D2B8;
+  background-color: rgba(0, 0, 0, 1);
   animation-duration: 2s;
   animation-timing-function: steps(16, end);
   animation-delay: 10.75s;
 }
 
 .innerSpanForCodeAnimationtekst9::after{
-  /* background-color:#D6CFB5; */
-  background-color:#d8d1b7;
-  
+  background-color: rgba(0, 0, 0, 1);
   animation-duration: 2.625s;
   animation-timing-function: steps(21, end);
   animation-delay: 13.75s;
 }
 
 .innerSpanForCodeAnimationtekst10::after{
-  /* background-color:#D4CAAF; */
-  background-color:#d6cfb5fb;
-  
+  background-color: rgba(0, 0, 0, 1);
   animation-duration: 0.375s;
   animation-timing-function: steps(3, end);
   animation-delay: 16.375s;
@@ -580,11 +571,11 @@ animation-delay: 8s;
 
 .baloon1, .baloon2, .baloon3, .baloon4, .baloon5 {
   position: absolute;
-  /* border: 1px solid red; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   transition: 20s ease-in-out;
+  /* border: 1px solid red; */
 }
 
 .baloon1 {
@@ -593,8 +584,8 @@ animation-delay: 8s;
   z-index: 1;
   width: 10vw;
   height: 10vw;
-  /* border: 1px solid red; */
   background-image: url(./pics/baloon1.svg);
+  /* border: 1px solid red; */
 }
 
 .baloon2 {
@@ -603,8 +594,8 @@ animation-delay: 8s;
   z-index: 2;
   width: 15vw;
   height: 15vw;
-  /* border: 1px solid red; */
   background-image: url(./pics/baloon2.svg);
+  /* border: 1px solid red; */
 }
 
 .baloon3 {
@@ -613,8 +604,8 @@ animation-delay: 8s;
   z-index: 3;
   width: 6vw;
   height: 6vw;
-  /* border: 1px solid red; */
   background-image: url(./pics/baloon3.svg);
+  /* border: 1px solid red; */
 }
 
 .baloon4 {
@@ -623,8 +614,8 @@ animation-delay: 8s;
   z-index: 4;
   width: 12vw;
   height: 12vw;
-  /* border: 1px solid red; */
   background-image: url(./pics/baloon4.svg);
+  /* border: 1px solid red; */
 }
 .baloon5 {
   top: 70%;
@@ -632,10 +623,9 @@ animation-delay: 8s;
   z-index: 5;
   width: 7vw;
   height: 7vw;
-  /* border: 1px solid red; */
   background-image: url(./pics/baloon5.svg);
+  /* border: 1px solid red; */
 }
-
 
 .baloonArea {
   position: fixed;
@@ -652,17 +642,20 @@ animation-delay: 8s;
 }
 
 
-@keyframes tekst1Animation { 
-  0% {left: -100%;}  
-  100% {left: 50%;}
+@keyframes tekst2Animation { 
+  0% {opacity: 1; left: 50%;}  
+  1% {opacity: 0; left: 50%;}  
+  10% {opacity: 0; left: -1000px;}  
+  100% {opacity: 1; left: 50%;}
 }
 
 @keyframes tekst4AnimationJunior { 
   0% {
-    font-size: 0;
-    color: black;
-    transform: translateX(-50%) rotate(0deg);
-  }  
+    font-size: 3vh;
+    color: rgb(197, 8, 8);
+    transform: translateX(-50%) rotate(350deg);
+  }
+    
   50% {
     font-size: 3vh;
     color: black;
@@ -676,7 +669,8 @@ animation-delay: 8s;
 }
 
 @keyframes showCodeTekst {
-  0%{left:0;}
+  0%{left:100%;}
+  1%{left:0;}
   100%{left:100%;}
 }
 
@@ -788,6 +782,9 @@ animation-delay: 8s;
 } 
 /* END @media only screen and (min-width: 1024px) */
 
+
+
+/* MOBILE BELOW */
 @media only screen and (min-width: 641px) {
   
   .mobileSwipe {
