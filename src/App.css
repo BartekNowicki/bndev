@@ -4,8 +4,13 @@
   box-sizing: border-box;
 }
 
-a, a:hover, a:active {
+/* div::selection {} */
+
+a:hover, a:active, a:visited, a:link {
   text-decoration: none;
+  outline-style: none;
+  /* border: 10px solid red; */
+  border: none;
 }
 
 body{
@@ -47,6 +52,69 @@ body{
   z-index:99;
 }
 
+.apiFriends {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  justify-content: center;
+  bottom: 1vmin;
+  left: 1vmin;
+  width: 60vw;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 7px 7px 0px 0px; 
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  border: 1px solid rgba(173, 2, 2, 0.5);
+  z-index: 1;
+}
+
+.apiFriends:hover {
+  background-color: rgba(216, 15, 15, 0.5);
+}
+
+.apiFriends:hover .updateIcon {
+  background-color: rgba(216, 15, 15, 0.5);
+}
+
+.apiFriendsTitle {
+  width: 100%;
+  text-align: center;
+  background-color: yellowgreen;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 3vmin;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 7vmin;
+  padding: 1vmin;
+  border-radius: 7px 7px 0px 0px;   
+}
+
+.updateIcon {
+  /* dimentions are close to lineHeight in that spot */
+  width: 7vmin;
+  height: 7vmin;
+  transform: translate(40%, 30%);
+  /* border: 1px solid red; */
+  z-index: 1;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* .updateIcon:hover {
+  transform: translate(40%, 30%);
+  border: 1px solid red;
+  
+} */
+
+.faceImg {
+  display: flex;
+  /* align-self: flex-start; */
+  /* justify-self: flex-start; */
+  width: 8vmin;
+  border-radius: 7px;
+  margin: 3px;
+}
+
 .centralFigureWrap{
   /* relative for the bow-tie */
   position: relative;
@@ -59,6 +127,7 @@ body{
   transition: 0.5s;
   /* border: 1px solid blue; */
 }
+
 
 .centralFigureBowtieWrap{
   position: absolute;
@@ -128,12 +197,12 @@ body{
 }
 
 .phoneIcon{
-  width: 10vh;
-  height: 10vh;
+  width: 8vh;
+  height: 8vh;
   background-image: url(./pics/phone.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  margin-top: 5vh; 
+  margin-top: 1vmax; 
   transition: 0.3s ease;
   border-radius: 10px; 
   /* border: 1px solid black; */
@@ -155,8 +224,8 @@ body{
 }
 
 .writeIcon{
-  width: 10vh;
-  height: 10vh;
+  width: 8vh;
+  height: 8vh;
   background-image: url(./pics/write.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -367,12 +436,20 @@ animation-name: activeCloud3AfterGoAway;
 }
 
 .moreBio {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: yellowgreen;
   border-radius: 5px;
-  padding: 3px;
+  padding: 3px 7px;
   color: rgb(122, 3, 3);
-  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.moreBio:hover {
+  background-color: rgb(197, 245, 102);
+  transform: scale(1,1) translate(-5px, -5px);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .arrow {
@@ -393,6 +470,7 @@ animation-name: activeCloud3AfterGoAway;
   justify-content: space-between;
   justify-items: space-between;
   /* border: 1px solid green;  */
+  
 }
 
 
@@ -750,12 +828,6 @@ animation-delay: 8s;
 /* media */
 /* ------------------------------------------------------------------------- */
 
-@media only screen and (max-width: 1024px) {
-
-}
-/* END @media only screen and (max-width: 1024px) */
-
-
 @media only screen and (min-width: 1024px) {
   
 .contactIcon:hover{
@@ -785,10 +857,22 @@ animation-delay: 8s;
 
 
 /* MOBILE BELOW */
-@media only screen and (min-width: 641px) {
+@media only screen and (max-width: 641px) {
   
   .mobileSwipe {
     display: none;
   }
 
-}/* END @media only screen and (max-width: 799px) */
+  .faceImg{
+   margin: 2px;
+  }
+
+}/* END @media only screen and (max-width: 641px) */
+
+
+@media only screen and (orientation: landscape) {
+.apiFriends{
+  width: 20vw;
+}
+
+}

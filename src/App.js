@@ -14,11 +14,13 @@ import CloudsCloseBtn from './components/CloudsCloseBtn';
 import Loader from './components/Loader';
 import SwipeIfMobile from './components/SwipeIfMobile';
 import Baloon from './components/Baloon';
+import ApiFriends from './components/ApiFriends';
 
 class App extends Component {
     state = {
       isAllLoaded : false,
-      isSwiped : false,
+      // isSwiped : false,
+      isSwiped : true,
       isAnyCloudActive : false,
       isDeviceMobile: false,
       throttleIntroAnimations: true,      
@@ -107,7 +109,7 @@ class App extends Component {
 
     handleSwipe = () => {
       // console.log('SWIPE!');
-      this.setState(prevState => ({ isSwiped : true, throttleIntroAnimations: false }));
+      this.setState(prevState => ({ isSwiped : true, isDeviceMobile: true, throttleIntroAnimations: false }));
     }
     
     handleCloudCloseClick = () => {
@@ -187,14 +189,14 @@ class App extends Component {
               <Baloon className = "baloon4" ratioX = "0.8" ratioY = "0.4"/>
               <Baloon className = "baloon5" ratioX = "0.9" ratioY = "0.2"/>
         </div>
-        
+        <ApiFriends/>
         <Router>
           <div className="pageWrap">
                 <Clouds data = {this.state.cloudData} handleCloudClick = {this.handleCloudClick}/>
                 {this.state.isAnyCloudActive && <CloudsCloseBtn handleCloudCloseClick = {this.handleCloudCloseClick}/>}
                 <NavLink to="/contact"><ContactIcon/></NavLink>
                 <NavLink to="/"><House/></NavLink>
-                <NavLink to="/bio"><Developer/></NavLink>                
+                <NavLink to="/bio"><Developer/></NavLink>                              
                    
                    <section className="mainSectionWrap">
                         <Switch>

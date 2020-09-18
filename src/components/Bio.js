@@ -1,11 +1,12 @@
 import React from 'react';
 import svgArrow from '../pics/arrow.svg';
 import { NavLink } from 'react-router-dom';
+import MoreBtn from './MoreBtn';
 
 const Bio = props => {
   return (
 	<>
-    <div className="daScroll">
+    <div className="daScroll"> 
         
         <div className="bioTextWrap">
     
@@ -25,7 +26,7 @@ const Bio = props => {
             <p className="bioTextClass"><img src={svgArrow} className="arrow" alt=""/>is internally motivated with a drive to deliver</p>
             <p className="bioTextClass"><img src={svgArrow} className="arrow" alt=""/>appreciates a sense of humor</p>
             
-            <NavLink to="/bio2"><p className="moreBio">more...</p></NavLink>
+            <NavLink to="/bio2"><MoreBtn className = "moreBio" textInside = "more..."/></NavLink>
         </div>
     </div>
   </>
@@ -33,3 +34,4 @@ const Bio = props => {
 }
 
 export default Bio;
+
