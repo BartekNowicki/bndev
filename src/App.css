@@ -92,19 +92,20 @@ body{
   font-weight: bold;
   font-size: 3vmin;
   text-transform: uppercase;
-  line-height: 7vmin;
+  /* line-height: 5vmin; */
   width: 100%;
   color: rgba(0, 0, 133, 0.8);
-  padding: 3px 10px;
+  padding: 2px 3px;
   text-align: center;
   /* border: 1px solid red; */
 }
 
 .updateIcon {
   /* dimentions are close to lineHeight in that spot */
-  width: 9vmin;
-  height: 9vmin;
+  width: 7vmin;
+  height: 7vmin;
   padding: 1vmin;
+  margin-bottom: 1vmin;
   /* border: 1px solid red; */
   border-radius: 50%;
 }
@@ -148,7 +149,7 @@ body{
   position: fixed;
   top: 50%;
   left: 50%;
-  padding: 3vh 3vh 5vh 3vh;
+  padding: 2vh 2vh 3vh 2vh;
   box-sizing: content-box;
   background-color: blueviolet;
   animation: rotatingLoader;
@@ -726,15 +727,15 @@ animation-delay: 8s;
 
 @keyframes rotatingLoader {
   0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg) translateX(-50%) translateY(-50%);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
   }
 
   50% {
-    transform: perspective(120px) rotateX(-360deg) rotateY(360deg) translateX(-50%) translateY(-50%);;
+    transform: perspective(120px) rotateX(-360deg) rotateY(360deg);
   }
 
   100% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg) translateX(-50%) translateY(-50%);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
   }
 }
 
