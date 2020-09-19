@@ -72,7 +72,10 @@ class ApiFriends extends Component {
             // console.log('click');
             this.fetchApiFriends();
         }}>
-            <p className="apiFriendsTitle">meet my fake api friends <img src={update} className = "updateIcon" alt="updateIcon"/></p>
+            <div className="apiFriendsHeader">
+                    <p>meet my fake api friends</p>
+                    <img src={update} className = "updateIcon" alt="updateIcon"/>
+            </div>
             {facesArr}
         </div>
       </> 
