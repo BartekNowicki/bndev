@@ -46,7 +46,7 @@ class App extends Component {
         cloudText: 'cloud3',
         isClicked: false,
         cloudLogoClass: 'cloudLogoClass3',
-        logoAlt: 'JAVASCRIPT',
+        logoAlt: 'SCSS',
       
       },{
         id: 4,
@@ -54,7 +54,7 @@ class App extends Component {
         cloudText: 'cloud4',
         isClicked: false,
         cloudLogoClass: 'cloudLogoClass4',
-        logoAlt: 'REACT',
+        logoAlt: 'JS',
       
       },{
         id: 5,
@@ -62,7 +62,7 @@ class App extends Component {
         cloudText: 'cloud5',
         isClicked: false,
         cloudLogoClass: 'cloudLogoClass5',
-        logoAlt: 'NODE',
+        logoAlt: 'REACT',
       
       },{
         id: 6,
@@ -70,7 +70,7 @@ class App extends Component {
         cloudText: 'cloud6',
         isClicked: false,
         cloudLogoClass: 'cloudLogoClass6',
-        logoAlt: 'EXPRESS',
+        logoAlt: 'WEBPACK',
       
       },{
         id: 7,
@@ -78,7 +78,7 @@ class App extends Component {
         cloudText: 'cloud7',
         isClicked: false,
         cloudLogoClass: 'cloudLogoClass7',
-        logoAlt: 'MONGO',
+        logoAlt: 'NODEJS',
       
       },{
         id: 8,
@@ -86,7 +86,31 @@ class App extends Component {
         cloudText: 'cloud8',
         isClicked: false,
         cloudLogoClass: 'cloudLogoClass8',
+        logoAlt: 'EXPRESS',
+      
+      },{
+        id: 9,
+        cloudClass : 'cloudWrap9',
+        cloudText: 'cloud9',
+        isClicked: false,
+        cloudLogoClass: 'cloudLogoClass9',
+        logoAlt: 'MONGO',
+      
+      },{
+        id: 10,
+        cloudClass : 'cloudWrap10',
+        cloudText: 'cloud10',
+        isClicked: false,
+        cloudLogoClass: 'cloudLogoClass10',
         logoAlt: 'SVG',
+      
+      },{
+        id: 11,
+        cloudClass : 'cloudWrap11',
+        cloudText: 'cloud11',
+        isClicked: false,
+        cloudLogoClass: 'cloudLogoClass11',
+        logoAlt: 'BOOTSTRAP',
       
       }]
     }

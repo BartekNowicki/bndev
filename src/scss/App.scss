@@ -285,6 +285,9 @@ border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
   }
 }
+@media screen and (orientation: portrait) {
+  top: 55vh;
+}  
 }
 
 .cloudsCloseBtnImg{
@@ -296,23 +299,75 @@ border-radius: 10px;
   height: 30%;
 }
 
-.cloudWrap1, .cloudWrap2, .cloudWrap3, .cloudWrap4 {
+
+.leftCloudsWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 50%;
+  height: 50%;
+  // border: 1px solid red;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+  }
+}
+
+.rightCloudsWrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  width: 50%;
+  height: 50%;
+  // border: 1px solid blue;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+.cloudWrap1, 
+.cloudWrap2, 
+.cloudWrap3, 
+.cloudWrap4, 
+.cloudWrap5 {
 background-image: url(../pics/thoughtCloudRight.svg);
 background-repeat: no-repeat;
 background-size: contain;
 }
 
-.cloudWrap5, .cloudWrap6, .cloudWrap7, .cloudWrap8{
+.cloudWrap6, 
+.cloudWrap7, 
+.cloudWrap8, 
+.cloudWrap9, 
+.cloudWrap10, 
+.cloudWrap11{
   background-image: url(../pics/thoughtCloudLeft.svg);
   background-repeat: no-repeat;
   background-size: contain;  
 }
 
-.cloudWrap1, .cloudWrap2, .cloudWrap3, .cloudWrap4, .cloudWrap5, .cloudWrap6, .cloudWrap7, .cloudWrap8 {
-  position: fixed;
-  top:2vh;
-  width:15vw;
-  height: 15vw;
+.cloudWrap1, 
+.cloudWrap2, 
+.cloudWrap3, 
+.cloudWrap4, 
+.cloudWrap5, 
+.cloudWrap6, 
+.cloudWrap7, 
+.cloudWrap8, 
+.cloudWrap9, 
+.cloudWrap10, 
+.cloudWrap11 {
+  // border: 1px solid rgb(255, 187, 0);
+  position: relative;
+  // top:2vh;
+  width:7vw;
+  height: 7vw;
   animation-name: cloudBump;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -323,18 +378,42 @@ background-size: contain;
     &:hover {
       transform: translate(0, 20%);
      }
-  }
+    }
+    @media screen and (orientation: portrait) {
+      width:15vw;
+      height: 15vw;
+    }  
 
 }
 
-.activeCloud1, .activeCloud2,.activeCloud3, .activeCloud4, .activeCloud5, .activeCloud6, .activeCloud7, .activeCloud8 {
+.activeCloud1, 
+.activeCloud2,
+.activeCloud3, 
+.activeCloud4, 
+.activeCloud5, 
+.activeCloud6, 
+.activeCloud7, 
+.activeCloud8, 
+.activeCloud9, 
+.activeCloud10, 
+.activeCloud11 {
   /* border: 1px solid red; */
   transform: translate(0, 20%);
   overflow: hidden;
 }
 
 /* before stays, after moves */
-.activeCloud1::before, .activeCloud2::before, .activeCloud3::before, .activeCloud4::before, .activeCloud5::before, .activeCloud6::before, .activeCloud7::before, .activeCloud8::before{
+.activeCloud1::before, 
+.activeCloud2::before, 
+.activeCloud3::before, 
+.activeCloud4::before, 
+.activeCloud5::before, 
+.activeCloud6::before, 
+.activeCloud7::before, 
+.activeCloud8::before,
+.activeCloud9::before,
+.activeCloud10::before,
+.activeCloud11::before {
   content:"";
   position: absolute;
   top:70%;
@@ -346,7 +425,17 @@ background-size: contain;
   background: url(../pics/green.svg) 0%  no-repeat, url(../pics/green.svg) 25% no-repeat, url(../pics/green.svg) 50% no-repeat, url(../pics/green.svg) 75%  no-repeat, url(../pics/green.svg) 100%  no-repeat;
   background-size: contain, contain, contain, contain, contain;  
 }
-.activeCloud1::after, .activeCloud2::after, .activeCloud3::after, .activeCloud4::after, .activeCloud5::after,  .activeCloud6::after, .activeCloud7::after, .activeCloud8::after {
+.activeCloud1::after, 
+.activeCloud2::after, 
+.activeCloud3::after, 
+.activeCloud4::after, 
+.activeCloud5::after,  
+.activeCloud6::after, 
+.activeCloud7::after, 
+.activeCloud8::after,
+.activeCloud9::after,
+.activeCloud10::after,
+.activeCloud11::after {
   content:"";
   position: absolute;
   top:70%;
@@ -396,48 +485,69 @@ animation-name: activeCloud3AfterGoAway;
   animation-name: activeCloud8AfterGoAway;
 }
 
+.activeCloud9::after{
+  animation-name: activeCloud9AfterGoAway;
+}
+
+.activeCloud10::after{
+  animation-name: activeCloud10AfterGoAway;
+}
+
+.activeCloud11::after{
+  animation-name: activeCloud11AfterGoAway;
+}
+
 .cloudWrap1{  
-  left: 1vw;
   animation-delay: 17s;  
 }
 .cloudWrap2{  
-  left: 11vw;
   animation-delay: 17.1s;  
 }
 
 .cloudWrap3{  
-  left: 21vw;
   animation-delay: 17.2s; 
 }
 
 .cloudWrap4{  
-  left: 30.5vw;
-  top:1vh;
   animation-delay: 17.3s; 
 }
 
 .cloudWrap5{  
-  top:1vh;
-  left: 54vw;
   animation-delay: 17.4s; 
 }
 
 .cloudWrap6{  
-  left: 64vw;
   animation-delay: 17.5s; 
 }
 
 .cloudWrap7{  
-  left: 74vw;
   animation-delay: 17.6s; 
 }
 
 .cloudWrap8{  
-  left: 84vw;
   animation-delay: 17.7s; 
 }
+.cloudWrap9{  
+  animation-delay: 17.8s; 
+}
+.cloudWrap10{  
+  animation-delay: 17.9s; 
+}
+.cloudWrap11{  
+  animation-delay: 18s; 
+}
 
-.cloudLogoClass1, .cloudLogoClass2, .cloudLogoClass3, .cloudLogoClass4, .cloudLogoClass5, .cloudLogoClass6, .cloudLogoClass7, .cloudLogoClass8 {
+.cloudLogoClass1, 
+.cloudLogoClass2, 
+.cloudLogoClass3, 
+.cloudLogoClass4, 
+.cloudLogoClass5, 
+.cloudLogoClass6, 
+.cloudLogoClass7, 
+.cloudLogoClass8,
+.cloudLogoClass9,
+.cloudLogoClass10,
+.cloudLogoClass11 {
   width: 30%;
   position: absolute;
   top: 25%;
@@ -446,16 +556,11 @@ animation-name: activeCloud3AfterGoAway;
    /* border: 2px solid red; */
 }
 
-.cloudLogoClass1, .cloudLogoClass2, .cloudLogoClass3, .cloudLogoClass4{
+.cloudLogoClass1 {
   width: 20%;
-  transform: translate(-50%, -50%);
 }
 
-.cloudLogoClass2, .cloudLogoClass4 {
-  width: 30%;
-}
-
-.cloudLogoClass5, .cloudLogoClass6, .cloudLogoClass7{
+.cloudLogoClass5, .cloudLogoClass7, .cloudLogoClass8, .cloudLogoClass9 {
   width: 40%;
 }
 
@@ -650,12 +755,6 @@ animation-name: activeCloud3AfterGoAway;
   font-size: 2.5vh;
 }
 
-/* .tekst7Class {} */
-
-/* .tekst8Class {} */
-
-/* .tekst9Class {} */
-
 .tekst10Class{
   padding-bottom: 2vh;
 }
@@ -795,9 +894,6 @@ animation-delay: 8s;
   }
 }
 
-
-
-
 @keyframes tekst2Animation { 
   0% {opacity: 1; left: 50%;}  
   1% {opacity: 0; left: 50%;}  
@@ -836,6 +932,7 @@ animation-delay: 8s;
   100%{top:2vh;}  
 }
 
+//THE 1000% VALUES SHOW SKILLS, DIFFERENT FOR EACH ITEM
 @keyframes activeCloud1AfterGoAway {
   0%{
     width: 50%;
@@ -850,7 +947,7 @@ animation-delay: 8s;
     width: 50%;
   }
   100%{
-    width: 20%;
+    width: 10%;
   }
 }
 @keyframes activeCloud3AfterGoAway {
@@ -866,7 +963,7 @@ animation-delay: 8s;
     width: 50%;
   }
   100%{
-    width: 30%;
+    width: 10%;
   }
 }
 @keyframes activeCloud5AfterGoAway {
@@ -874,7 +971,7 @@ animation-delay: 8s;
     width: 50%;
   }
   100%{
-    width: 40%;
+    width: 20%;
   }
 }
 @keyframes activeCloud6AfterGoAway {
@@ -882,7 +979,7 @@ animation-delay: 8s;
     width: 50%;
   }
   100%{
-    width: 40%;
+    width: 30%;
   }
 }
 @keyframes activeCloud7AfterGoAway {
@@ -890,7 +987,7 @@ animation-delay: 8s;
     width: 50%;
   }
   100%{
-    width: 40%;
+    width: 30%;
   }
 }
 @keyframes activeCloud8AfterGoAway {
@@ -899,6 +996,30 @@ animation-delay: 8s;
   }
   100%{
     width: 30%;
+  }
+}
+@keyframes activeCloud9AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 30%;
+  }
+}
+@keyframes activeCloud10AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 20%;
+  }
+}
+@keyframes activeCloud11AfterGoAway {
+  0%{
+    width: 50%;
+  }
+  100%{
+    width: 20%;
   }
 }
 
