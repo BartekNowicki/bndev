@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './scss/App.scss';
 import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
 import Clouds from './components/Clouds';
 import House from './components/House';

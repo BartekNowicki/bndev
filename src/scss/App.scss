@@ -1,8 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import '_reset';
+@import '_variables';
 
 /* div::selection {} */
 
@@ -14,7 +11,7 @@ a:hover, a:active, a:visited, a:link {
 }
 
 body{
-  background-color: rgb(255, 145, 0);
+  background-color: $color-body-primary;
   display: flex;
   width:100%;
   height: 100%;
@@ -44,12 +41,15 @@ body{
   width:100%;
   height: 100%;
   /* border: 1px solid black; */
-  background-color: rgb(255, 145, 0);
-  background-image: url(./pics/swipe.svg);
+  background-color: $color-body-primary;
+  background-image: url(../pics/swipe.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   z-index:99;
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    display: none;
+}
 }
 
 .apiFriends {
@@ -66,11 +66,16 @@ body{
   /* border: 1px solid rgba(0, 0, 0, 0.1); */
   border: 1px solid rgba(173, 2, 2, 0.5);
   z-index: 1;
+  @media only screen and (orientation: landscape) {
+    width: 20vw;
+    }
+  @media screen and (min-width: map-get($breakpoints, lg)) {
+      &:hover {
+        background-color: rgba(216, 15, 15, 0.5);
+       }
+  }  
 }
 
-.apiFriends:hover {
-  background-color: rgba(216, 15, 15, 0.5);
-}
 
 .apiFriends:hover .updateIcon {
   background-color: rgba(216, 15, 15, 0.5);
@@ -115,6 +120,9 @@ body{
   width: 8vmin;
   border-radius: 7px;
   margin: 3px;
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    margin: 2px;
+  }
 }
 
 .centralFigureWrap{
@@ -122,11 +130,16 @@ body{
   position: relative;
   width:15vh;
   height: 15vh;
-  background-image: url(./pics/BartoszNowicki.png);
+  background-image: url(../pics/BartoszNowicki.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   transition: 0.5s;
+  @media screen and (min-width: map-get($breakpoints, lg)) {
+    &:hover {
+      transform: translate(0, 20%);
+     }
+  }
   /* border: 1px solid blue; */
 }
 
@@ -139,7 +152,7 @@ body{
   width: 30px;
   height: 30px;
   /* border: 1px solid blue; */
-  background-image: url(./pics/bow-tie.svg);
+  background-image: url(../pics/bow-tie.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -180,12 +193,19 @@ body{
   right: 1vw;
   width: 11vh;
   height: 11vh;
-  background-image: url(./pics/contacts.svg);
+  background-image: url(../pics/contacts.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   transition: 0.3s ease;
   border-radius: 10px; 
+  @media screen and (min-width: map-get($breakpoints, lg)) {
+    &:hover{
+      transform: scale(1,1) translate(-5px, -5px);
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 .houseIcon{
@@ -194,18 +214,25 @@ body{
   right: 1vw;
   width: 10vh;
   height: 10vh;
-  background-image: url(./pics/house.svg);
+  background-image: url(../pics/house.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 130%;
   transition: 0.3s ease;
-  border-radius: 10px; 
+  border-radius: 10px;
+  @media screen and (min-width: map-get($breakpoints, lg)) {
+    &:hover {
+      transform: scale(1,1) translate(-5px, -5px);
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+     }
+  }
 }
 
 .phoneIcon{
   width: 8vh;
   height: 8vh;
-  background-image: url(./pics/phone.svg);
+  background-image: url(../pics/phone.svg);
   background-repeat: no-repeat;
   background-position: center center;
   margin-top: 1vmax; 
@@ -217,7 +244,7 @@ body{
 .astro{
   width: 30vh;
   height: 30vh;
-  background-image: url(./pics/astro.svg);
+  background-image: url(../pics/astro.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -232,7 +259,7 @@ body{
 .writeIcon{
   width: 8vh;
   height: 8vh;
-  background-image: url(./pics/write.svg);
+  background-image: url(../pics/write.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -245,12 +272,19 @@ top: 20vw;
 right: 1vw;
 width: 10vh;
 height: 10vh;
-background-image: url(./pics/thoughtCloudRight.svg);
+background-image: url(../pics/thoughtCloudRight.svg);
 background-repeat: no-repeat;
 background-size: contain;
 transition: 0.3s ease;
 border-radius: 10px; 
 /* border: 1px solid red; */
+@media screen and (min-width: map-get($breakpoints, lg)) {
+  &:hover { 
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
 }
 
 .cloudsCloseBtnImg{
@@ -263,13 +297,13 @@ border-radius: 10px;
 }
 
 .cloudWrap1, .cloudWrap2, .cloudWrap3, .cloudWrap4 {
-background-image: url(./pics/thoughtCloudRight.svg);
+background-image: url(../pics/thoughtCloudRight.svg);
 background-repeat: no-repeat;
 background-size: contain;
 }
 
 .cloudWrap5, .cloudWrap6, .cloudWrap7, .cloudWrap8{
-  background-image: url(./pics/thoughtCloudLeft.svg);
+  background-image: url(../pics/thoughtCloudLeft.svg);
   background-repeat: no-repeat;
   background-size: contain;  
 }
@@ -285,6 +319,12 @@ background-size: contain;
   animation-duration: 0.5s;
   /* border: 1px solid rgb(131, 131, 238); */
   transition: 0.5s;
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+    &:hover {
+      transform: translate(0, 20%);
+     }
+  }
+
 }
 
 .activeCloud1, .activeCloud2,.activeCloud3, .activeCloud4, .activeCloud5, .activeCloud6, .activeCloud7, .activeCloud8 {
@@ -303,7 +343,7 @@ background-size: contain;
   width: 50%;   
   height: 10%;
   /* border: 1px solid black; */
-  background: url(./pics/green.svg) 0%  no-repeat, url(./pics/green.svg) 25% no-repeat, url(./pics/green.svg) 50% no-repeat, url(./pics/green.svg) 75%  no-repeat, url(./pics/green.svg) 100%  no-repeat;
+  background: url(../pics/green.svg) 0%  no-repeat, url(../pics/green.svg) 25% no-repeat, url(../pics/green.svg) 50% no-repeat, url(../pics/green.svg) 75%  no-repeat, url(../pics/green.svg) 100%  no-repeat;
   background-size: contain, contain, contain, contain, contain;  
 }
 .activeCloud1::after, .activeCloud2::after, .activeCloud3::after, .activeCloud4::after, .activeCloud5::after,  .activeCloud6::after, .activeCloud7::after, .activeCloud8::after {
@@ -426,7 +466,7 @@ animation-name: activeCloud3AfterGoAway;
   padding-bottom: 10vw;
   width: auto;
   height: 100%;
-  background-image: url(./pics/scrollNoBlob.svg);
+  background-image: url(../pics/scrollNoBlob.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
@@ -442,21 +482,37 @@ animation-name: activeCloud3AfterGoAway;
 }
 
 .moreBio {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  background-color: yellowgreen;
+  margin-top: 2vh;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  background-color: rgb(205, 50, 50);
   border-radius: 5px;
   padding: 3px 7px;
-  color: rgb(122, 3, 3);
+  color: rgb(209, 212, 8);
   cursor: pointer;
   transition: 0.3s ease;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  @media screen and (min-width: map-get($breakpoints, md)) {
+    &:hover {
+      color: black;
+      background-color: rgb(197, 245, 102);
+      transform: scale(1,1) translate(-5px, -5px);
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    padding: 2px 5px;
+    font-size: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  @media screen and (max-width: map-get($breakpoints, xs)) {
+    padding: 2px 5px;
+  }
 }
 
-.moreBio:hover {
-  background-color: rgb(197, 245, 102);
-  transform: scale(1,1) translate(-5px, -5px);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
+
 
 .arrow {
   transform: scaleX(-1);
@@ -668,7 +724,7 @@ animation-delay: 8s;
   z-index: 1;
   width: 10vw;
   height: 10vw;
-  background-image: url(./pics/baloon1.svg);
+  background-image: url(../pics/baloon1.svg);
   /* border: 1px solid red; */
 }
 
@@ -678,7 +734,7 @@ animation-delay: 8s;
   z-index: 2;
   width: 15vw;
   height: 15vw;
-  background-image: url(./pics/baloon2.svg);
+  background-image: url(../pics/baloon2.svg);
   /* border: 1px solid red; */
 }
 
@@ -688,7 +744,7 @@ animation-delay: 8s;
   z-index: 3;
   width: 6vw;
   height: 6vw;
-  background-image: url(./pics/baloon3.svg);
+  background-image: url(../pics/baloon3.svg);
   /* border: 1px solid red; */
 }
 
@@ -698,7 +754,7 @@ animation-delay: 8s;
   z-index: 4;
   width: 12vw;
   height: 12vw;
-  background-image: url(./pics/baloon4.svg);
+  background-image: url(../pics/baloon4.svg);
   /* border: 1px solid red; */
 }
 .baloon5 {
@@ -707,7 +763,7 @@ animation-delay: 8s;
   z-index: 5;
   width: 7vw;
   height: 7vw;
-  background-image: url(./pics/baloon5.svg);
+  background-image: url(../pics/baloon5.svg);
   /* border: 1px solid red; */
 }
 
@@ -846,55 +902,10 @@ animation-delay: 8s;
   }
 }
 
-/* ------------------------------------------------------------------------- */
-/* media */
-/* ------------------------------------------------------------------------- */
+/* MOBILE BELOW - WHAT WAS THAT?*/
+// @media only screen and (max-width: 641px) {
+//   .mobileSwipe {
+//     display: none;
+//   }
+// }
 
-@media only screen and (min-width: 1024px) {
-  
-.contactIcon:hover{
-  transform: scale(1,1) translate(-5px, -5px);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.houseIcon:hover{
-  transform: scale(1,1) translate(-5px, -5px);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.cloudsCloseBtn:hover{
-  transform: translate(-5px, -5px);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.cloudWrap1:hover, .cloudWrap2:hover, .cloudWrap3:hover, .cloudWrap4:hover, .cloudWrap5:hover, .cloudWrap6:hover, .cloudWrap7:hover, .cloudWrap8:hover, .centralFigureWrap:hover {
-  transform: translate(0, 20%);
-}
-} 
-/* END @media only screen and (min-width: 1024px) */
-
-
-
-/* MOBILE BELOW */
-@media only screen and (max-width: 641px) {
-  
-  .mobileSwipe {
-    display: none;
-  }
-
-  .faceImg{
-   margin: 2px;
-  }
-
-}/* END @media only screen and (max-width: 641px) */
-
-
-@media only screen and (orientation: landscape) {
-.apiFriends{
-  width: 20vw;
-}
-
-}
