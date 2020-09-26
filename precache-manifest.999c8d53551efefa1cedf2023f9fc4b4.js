@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7008007d6a7dde6b5dc5e47a77460400",
+    "revision": "d23617a24412649f6776443a945a345e",
     "url": "/bndev/index.html"
   },
   {
-    "revision": "927203b2aac7ea3c81d9",
-    "url": "/bndev/static/css/main.04433777.chunk.css"
+    "revision": "11b6bd98139bc54ba0d8",
+    "url": "/bndev/static/css/main.3ba82689.chunk.css"
   },
   {
-    "revision": "7820d03ab94c2ca70faa",
-    "url": "/bndev/static/js/2.095c2f8f.chunk.js"
+    "revision": "ea2d90c5dd092aea0fc3",
+    "url": "/bndev/static/js/2.83f61c8f.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/bndev/static/js/2.095c2f8f.chunk.js.LICENSE.txt"
+    "url": "/bndev/static/js/2.83f61c8f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "927203b2aac7ea3c81d9",
-    "url": "/bndev/static/js/main.952823e4.chunk.js"
+    "revision": "11b6bd98139bc54ba0d8",
+    "url": "/bndev/static/js/main.90b2114f.chunk.js"
   },
   {
     "revision": "b859aa736c0bda36bbc1",
@@ -54,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5c50c93af713cc46e34ffcb8aa12727c",
     "url": "/bndev/static/media/baloon5.5c50c93a.svg"
+  },
+  {
+    "revision": "03c84bcc3edf09694692ee18fa86d163",
+    "url": "/bndev/static/media/bootstrap.03c84bcc.svg"
   },
   {
     "revision": "19734bca0a5d6fa54b6c8e4e80b2be2f",
@@ -108,6 +112,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bndev/static/media/react.4009eef3.svg"
   },
   {
+    "revision": "b446ca5a397c1ef6fb94cd02c4e94335",
+    "url": "/bndev/static/media/sass.b446ca5a.svg"
+  },
+  {
     "revision": "8e783bda2d8d87243743caeee71fc73b",
     "url": "/bndev/static/media/scrollNoBlob.8e783bda.svg"
   },
@@ -130,6 +138,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c19db8831f9a9780b02cbc3e73768cb6",
     "url": "/bndev/static/media/update.c19db883.svg"
+  },
+  {
+    "revision": "872ecaf99b4f8131a4c8a7c9751bc13a",
+    "url": "/bndev/static/media/webpack.872ecaf9.svg"
   },
   {
     "revision": "53b662cc28a98ce0d01880e53bd17b56",
