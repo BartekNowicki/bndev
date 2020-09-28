@@ -29,10 +29,9 @@ const Clouds = props => {
   const arrayOfRightClouds = rightCloudsOnly.map((cloud, index) => 
     <div key = {cloud.id} className={cloud.isClicked ? cloud.cloudClass + ' activeCloud'+cloud.id : cloud.cloudClass}  onClick = {(e) => props.handleCloudClick(cloud.id)}><img className={cloud.cloudLogoClass} src={logoArray[index+half-1]} alt={cloud.logoAlt}/></div>);
     
-    console.log(arrayOfLeftClouds);
-    console.log(arrayOfRightClouds);    
-       
-    // console.log('CLOUDS:  ',arrayOfClouds);
+    // console.log(arrayOfLeftClouds);
+    // console.log(arrayOfRightClouds);    
+  
   return (
 	  <>
     <div className="leftCloudsWrap">{arrayOfLeftClouds}</div>    

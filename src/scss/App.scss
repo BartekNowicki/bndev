@@ -52,6 +52,18 @@ body{
 }
 }
 
+.canvas {
+  width: 100vw;
+  height: 100vh;
+  // border: 2px solid green;
+  position: fixed;
+  top: 0;
+  left: 0;
+  //needs to be -1 or all interactivity halts
+  z-index: -1;
+  
+}
+
 .apiFriends {
   display: flex;
   flex-wrap: wrap;
@@ -554,7 +566,11 @@ animation-name: activeCloud3AfterGoAway;
   left: 50%;
   transform: translate(-50%, -50%);  
    /* border: 2px solid red; */
-}
+   @media screen and (max-width: map-get($breakpoints, sm)) {
+    top: 27%;      
+    }
+  }
+
 
 .cloudLogoClass1 {
   width: 20%;

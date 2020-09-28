@@ -15,6 +15,7 @@ import Loader from './components/Loader';
 import SwipeIfMobile from './components/SwipeIfMobile';
 import Baloon from './components/Baloon';
 import ApiFriends from './components/ApiFriends';
+import Canvas from './components/Canvas';
 
 class App extends Component {
     state = {
@@ -213,7 +214,8 @@ class App extends Component {
               <Baloon className = "baloon4" ratioX = "0.8" ratioY = "0.4"/>
               <Baloon className = "baloon5" ratioX = "0.9" ratioY = "0.2"/>
         </div>
-        <ApiFriends/>
+        {/* <ApiFriends/> */}
+        <Canvas/>
         <Router>
           <div className="pageWrap">
                 <Clouds data = {this.state.cloudData} handleCloudClick = {this.handleCloudClick}/>
