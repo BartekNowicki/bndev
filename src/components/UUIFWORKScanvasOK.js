@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 class Canvas extends Component {
 
     state = {
-        stars: [{ id: 1, x : 0, y: 0, radius: 0, borderColor: 'black',     fillingColor:'black' }],
+        stars: [{ id: 1, x : 0, y: 0, radius: 0, borderColor: 'black', fillingColor:'black' }],
         canvas: '',
         ctx: '',
         canvasWidth: '',
@@ -17,7 +17,10 @@ class Canvas extends Component {
       componentDidMount() {
         this.initCanvas();
         //need to wait before starting to draw for the state to be ready
-        setTimeout(() => {this.draw()}, 1000); 
+        setTimeout(() => {
+          this.createTheStars();
+          this.animateTheStars();
+        }, 1000); 
     }
 
     createATestRectangle = () => {
@@ -43,9 +46,9 @@ class Canvas extends Component {
       ctx.fill();
     }
 
-    createAStar = (star, context) => {
-      context = this.state.ctx;
-      // console.log(context);
+    createAStar = (star) => {
+      let context = this.state.ctx;
+      context.save();
       context.fillStyle = star.fillingColor;      
       context.beginPath();
       context.translate(star.x, star.y);
@@ -58,23 +61,14 @@ class Canvas extends Component {
         context.rotate((Math.PI / 180) * 36);
         context.lineTo(0, 0 - star.radius);
       }
-      context.fill(); 
-      
+      context.fill();
+      context.restore();
       let kopia = [...this.state.stars];
-      console.log('we have stars:', kopia.length);
-      console.log('our array of star objects: ', this.state.stars);
+      // console.log('we have stars:', kopia.length);
+      // console.log('our array of star objects: ', this.state.stars);
       let kopiaUpdated = [...kopia];
-      kopiaUpdated.push({
-        id: kopia.length+1,
-        x : star.x,
-        y: star.y,
-        radius: star.radius,
-        borderColor: star.borderColor,
-        fillingColor: star.fillingColor,
-        });
-        this.setState({stars: kopiaUpdated});
-        // console.log(this.state.stars);
-
+      kopiaUpdated.push({ id: kopia.length+1, x : star.x, y: star.y, radius: star.radius, borderColor: star.borderColor, fillingColor: star.fillingColor, });
+      this.setState({stars: kopiaUpdated});
     }    
     
     createTheStars = () => {
@@ -89,55 +83,47 @@ class Canvas extends Component {
         // console.log(this.state.canvasWidth, this.state.canvasHeight);
         const deltaX = this.state.canvasWidth/19;
         const deltaY = this.state.canvasHeight/19;
-        console.log(deltaX, deltaY);
+        // console.log(deltaX, deltaY);
 
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 30; i++) {
           // let coordinateX = deltaX * i;
           // let coordinateY = deltaY * i;
           let coordinateX = Math.round(deltaX * Math.random()*20);
           let coordinateY = Math.round(deltaY * Math.random()*20);
-          let randomRadius = Math.round(Math.random()*100);
+          let randomRadius = Math.round(Math.random()*5 +2);
 
           setTimeout(()=>{
             this.createAStar({
               x: coordinateX, 
               y: coordinateY, 
               radius: randomRadius,
-              borderColor: 'yellow',
-              fillingColor: 'red'
+              borderColor: 'black',
+              fillingColor: '#FFFA00'
             }); 
-            console.log('another star is born...', coordinateX, coordinateY, randomRadius);
+            // console.log('another star is born...', coordinateX, coordinateY, randomRadius);
           }, i*1000);
       }
-      
     }
   
    initCanvas = () => {
       if (document.querySelector('canvas')) {
           const myCanvas = document.querySelector('canvas');
           if (!this.state.canvas) {
-          this.setState({
-            canvas: myCanvas,
-            canvasWidth: myCanvas.offsetWidth,
-            canvasHeight: myCanvas.offsetHeight,
-            ctx: myCanvas.getContext('2d'),
-            fillStyle : 'black',
-            dpr: window.devicePixelRatio,
-        });
-        console.log('canvas identified: ', myCanvas);
+          this.setState({ canvas: myCanvas, canvasWidth: myCanvas.offsetWidth, canvasHeight: myCanvas.offsetHeight, ctx: myCanvas.getContext('2d'), fillStyle : 'black', dpr: window.devicePixelRatio, });
+          // console.log('canvas identified: ', myCanvas);
         }
     } else { 
        console.log('canvas not detected!');
     }
    }
 
-   draw = () => {
-        console.log('drawing the stars...');
+   animateTheStars = () => {
+        console.log('animating the stars...');
         //set this in motion to let the animation play
         //THERE IS NO ANIMATION YET
         // window.requestAnimationFrame(() => this.draw()); 
         // this.createATestRectangle();
-        this.createTheStars();
+        
    }
  
   render() {

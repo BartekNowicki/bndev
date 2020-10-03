@@ -20,8 +20,8 @@ import Canvas from './components/Canvas';
 class App extends Component {
     state = {
       isAllLoaded : false,
-      // isSwiped : false,
-      isSwiped : true,
+      isSwiped : false,
+      // isSwiped : true,
       isAnyCloudActive : false,
       isDeviceMobile: false,
       throttleIntroAnimations: true,      
@@ -208,13 +208,15 @@ class App extends Component {
         <>
         {!this.state.isSwiped && <SwipeIfMobile swipeHandler = {this.handleSwipe}/>}
         <div className="baloonArea">
-              <Baloon className = "baloon1" ratioX = "0.2" ratioY = "0.9"/>
-              <Baloon className = "baloon2" ratioX = "0.4" ratioY = "0.8"/>
-              <Baloon className = "baloon3" ratioX = "0.6" ratioY = "0.6"/>
-              <Baloon className = "baloon4" ratioX = "0.8" ratioY = "0.4"/>
-              <Baloon className = "baloon5" ratioX = "0.9" ratioY = "0.2"/>
+              {/* <Baloon className = "baloon1" ratioX = "0.2" ratioY = "0.9"/> */}
+              <Baloon color = "red" className = "baloon1Wrap" ratioX = "0.2" ratioY = "0.9"/>
+              <Baloon color = "green" className = "baloon2Wrap" ratioX = "0.4" ratioY = "0.8"/>
+              <Baloon color = "blue" className = "baloon3Wrap" ratioX = "0.6" ratioY = "0.6"/>
+              <Baloon color = "yellow" className = "baloon4Wrap" ratioX = "0.8" ratioY = "0.4"/>
+              <Baloon color = "brown" className = "baloon5Wrap" ratioX = "0.9" ratioY = "0.2"/>
+              
         </div>
-        {/* <ApiFriends/> */}
+        <ApiFriends/>
         <Canvas/>
         <Router>
           <div className="pageWrap">
