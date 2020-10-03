@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "86e4a0a57bbe138a9990fd2fe92fc8a9",
+    "revision": "d54185b1d112b2803e615514ee3fcf21",
     "url": "/bndev/index.html"
   },
   {
-    "revision": "2d43b59de0c40ab6d12a",
-    "url": "/bndev/static/css/main.08f1e1ff.chunk.css"
+    "revision": "41310f6a73f2804acdc7",
+    "url": "/bndev/static/css/main.b387296b.chunk.css"
   },
   {
-    "revision": "501e57fdc4e663b72854",
-    "url": "/bndev/static/js/2.3c9df7e2.chunk.js"
+    "revision": "9d9be3707bb4a9b1dcef",
+    "url": "/bndev/static/js/2.77b90722.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/bndev/static/js/2.3c9df7e2.chunk.js.LICENSE.txt"
+    "revision": "85c1ecd325742a4c0551d2653970c6fb",
+    "url": "/bndev/static/js/2.77b90722.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2d43b59de0c40ab6d12a",
-    "url": "/bndev/static/js/main.3e3a8969.chunk.js"
+    "revision": "41310f6a73f2804acdc7",
+    "url": "/bndev/static/js/main.253ba224.chunk.js"
   },
   {
     "revision": "b859aa736c0bda36bbc1",
@@ -34,26 +34,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d15ffdd7a16689f6407e0e335aaccbc4",
     "url": "/bndev/static/media/astro.d15ffdd7.svg"
-  },
-  {
-    "revision": "54c10430eccf864277894ad587a1c01c",
-    "url": "/bndev/static/media/baloon1.54c10430.svg"
-  },
-  {
-    "revision": "905595e377ae6f23d85a603bcea54d30",
-    "url": "/bndev/static/media/baloon2.905595e3.svg"
-  },
-  {
-    "revision": "5d2b024f79b9d14e52139803f09adb39",
-    "url": "/bndev/static/media/baloon3.5d2b024f.svg"
-  },
-  {
-    "revision": "ec62fdf5fdd13770ffc89b446b963812",
-    "url": "/bndev/static/media/baloon4.ec62fdf5.svg"
-  },
-  {
-    "revision": "5c50c93af713cc46e34ffcb8aa12727c",
-    "url": "/bndev/static/media/baloon5.5c50c93a.svg"
   },
   {
     "revision": "03c84bcc3edf09694692ee18fa86d163",
