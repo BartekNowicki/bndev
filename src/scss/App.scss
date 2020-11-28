@@ -49,7 +49,7 @@ body{
   background-position: center;
   background-size: contain;
   z-index:99;
-  @media screen and (max-width: map-get($breakpoints, sm)) {
+  @media screen and (min-width: map-get($breakpoints, md)) {
     display: none;
 }
 }

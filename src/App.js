@@ -182,7 +182,7 @@ class App extends Component {
       if (checkedElement) {
         // console.log('checkedElement: ', checkedElement);
         const SwipeVisibility = window.getComputedStyle(checkedElement).getPropertyValue('display');
-        // console.log('SwipeVisibility: ', SwipeVisibility);
+        console.log('SwipeVisibility: ', SwipeVisibility);
         if (SwipeVisibility === 'none') {
           console.log('swipe exists but is invisible - this is a desktop');
           this.setState({isDeviceMobile: true});

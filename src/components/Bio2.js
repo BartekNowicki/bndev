@@ -20,13 +20,6 @@ const Bio2 = props => {
             <p className="bioTextClass"><img src={svgArrow} className="arrow" alt =""/>art and creativity</p>
 
             <p className="bioTextTitleClass bioColorRed">Reach out and let's talk!</p>
-
-            <p className="bioTextTitleClass">I am currently working on</p>
-            {/* <p className="bioTextClass small">https://www.konferencyjni.pl/</p>
-            <p className="bioTextClass small">https://barteknowicki.github.io/OlgaTlumaczy/</p> */}
-            
-             <p className="bioTextClass small"><a href="https://www.konferencyjni.pl/" target="_blank">konferencyjni.pl</a></p> 
-             <p className="bioTextClass small"><a href="https://barteknowicki.github.io/OlgaTlumaczy/" target="_blank">OlgaTlumaczy.pl</a></p> 
         </div>
     </div>
   </>
