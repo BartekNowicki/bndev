@@ -1,6 +1,6 @@
 import React from 'react';
 
-const House = props => {
+const House = (props: any): JSX.Element => {
   return (
 	<>
     <div className="houseIcon"></div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const ErrorPage = props => {
+const ErrorPage = (props: any): JSX.Element => {
   return (
 	<>
     <div className="daScroll">

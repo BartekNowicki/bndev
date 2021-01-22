@@ -1,5 +1,4 @@
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
 
 const text1 = 'my name is';
 const text2 = 'Bartosz Nowicki';
@@ -12,7 +11,7 @@ const text8 = `.then(value => {`;
 const text9 = `console.log("hired!")`;
 const text10 = `});`;
 
-const IntroAnimation = props => {
+const IntroAnimation = (props: any): JSX.Element => {
   const shouldIstartAnimations = props[0] && props[1];
   
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MoreBtn = props => {
+const MoreBtn = (props: any): JSX.Element => {
   return (
 	<>
     <button className="moreBio">{props.textInside}</button>
@@ -9,7 +9,3 @@ const MoreBtn = props => {
 }
 
 export default MoreBtn;
-
-
-
-// {props.className}

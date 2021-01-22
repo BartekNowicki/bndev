@@ -13,7 +13,13 @@ import bootstrapLogo from '../pics/bootstrap.svg';
 
 const logoArray = [html5Logo, css3Logo, sassLogo, javascriptLogo, reactLogo, webpackLogo, nodejsLogo, expressLogo, mongodbLogo, svgLogo, bootstrapLogo];
 
-const Clouds = props => {
+type CloudsProps = {
+    data: any,
+    handleCloudClick: any,
+}
+
+
+const Clouds = (props: CloudsProps): JSX.Element => {
 
   const kopia = [...props.data];
   const half = Math.ceil(kopia.length / 2);
@@ -32,7 +38,7 @@ const Clouds = props => {
     // console.log(arrayOfLeftClouds);
     // console.log(arrayOfRightClouds);    
   
-  return (
+  return ( 
 	  <>
     <div className="leftCloudsWrap">{arrayOfLeftClouds}</div>    
     <div className="rightCloudsWrap">{arrayOfRightClouds}</div>    

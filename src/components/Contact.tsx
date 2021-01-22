@@ -1,7 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
-const Contact = props => {
+const Contact = (props: any): JSX.Element => {
   return (
 	<>
     <div className="daScroll">
@@ -12,7 +11,7 @@ const Contact = props => {
             <div className="phoneIcon"></div>
             <p className="bioTextTitleClass contactDetails">( +48 )  605 - 769 - 837</p>
             <div className="writeIcon"></div>
-            <p className="bioTextTitleClass contactDetails">bardo@bardo.com.pl</p>
+            <p className="bioTextTitleClass contactDetails">bartosznowickihq@gmail.com</p>
             
         </div>
     </div>

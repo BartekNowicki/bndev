@@ -44,18 +44,15 @@ class ApiFriends extends Component {
       }
 
       fetchApiFriends = () => {
-        let newFriendsArray = [];        
+        let newFriendsArray: { id: number; url: any; }[] = [];        
 
         fetch(API)
         .then(resp => {
-            // console.log('the endpoint said: ', resp) 
             return resp})
         .then(resp => resp.json())
         .then(data => {
             for (let i = 0; i < data.results.length; i++) {
                 newFriendsArray[i] = {id: i+1, url: data.results[i].picture.thumbnail};
-                // console.log('the endpoint said: ', data.results[i].picture.thumbnail); 
-                // console.log(newFriendsArray[i]);
             }
             this.setState(prevState => ({friends: newFriendsArray}));
          })
@@ -69,7 +66,6 @@ class ApiFriends extends Component {
     return (
         <>
         <div className="apiFriends" onClick={() => {
-            // console.log('click');
             this.fetchApiFriends();
         }}>
             <div className="apiFriendsHeader">

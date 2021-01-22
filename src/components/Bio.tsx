@@ -3,7 +3,7 @@ import svgArrow from '../pics/arrow.svg';
 import { NavLink } from 'react-router-dom';
 import MoreBtn from './MoreBtn';
 
-const Bio = props => {
+const Bio = (props: {}): JSX.Element => {
   return (
 	<>
     <div className="daScroll"> 

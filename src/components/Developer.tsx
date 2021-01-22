@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Developer = props => {
+const Developer = (props: any): JSX.Element => {
   return (
 	<>
     <div className="centralFigureWrap">

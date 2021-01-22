@@ -1,7 +1,7 @@
 import React from 'react';
 import svgArrow from '../pics/arrow.svg';
 
-const Bio2 = props => {
+const Bio2 = (props: {}): JSX.Element => {
   return (
 	<>
     <div className="daScroll">

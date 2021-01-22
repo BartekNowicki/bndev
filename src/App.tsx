@@ -20,8 +20,8 @@ import Canvas from './components/Canvas';
 class App extends Component {
     state = {
       isAllLoaded : false,
-      isSwiped : false,
-      // isSwiped : true,
+      // isSwiped : false,
+      isSwiped : true,
       isAnyCloudActive : false,
       isDeviceMobile: false,
       throttleIntroAnimations: true,      
@@ -117,8 +117,7 @@ class App extends Component {
     }
 
     //mark the cloud as clicked
-    handleCloudClick = (cloudId) => {
-      // console.log('click: ', cloudId);
+    handleCloudClick = (cloudId: number) => {
       const cloudDataCopy = [...this.state.cloudData];      
       cloudDataCopy.forEach(item => {
         if(item.id === cloudId) {
@@ -170,17 +169,14 @@ class App extends Component {
 
     checkIfAnyCloudActive = () => {
       if (this.state.cloudData.filter(item => item.isClicked).length > 0){   
-        // console.log('we have an active cloud or two!');     
         return true;
       }
-      // console.log('no active clouds found...');
       return false;
     }  
     
     checkIfMobileDevice = () => {
       const checkedElement = document.querySelector('.mobileSwipe');
       if (checkedElement) {
-        // console.log('checkedElement: ', checkedElement);
         const SwipeVisibility = window.getComputedStyle(checkedElement).getPropertyValue('display');
         console.log('SwipeVisibility: ', SwipeVisibility);
         if (SwipeVisibility === 'none') {
@@ -208,16 +204,15 @@ class App extends Component {
         <>
         {!this.state.isSwiped && <SwipeIfMobile swipeHandler = {this.handleSwipe}/>}
         <div className="baloonArea">
-              {/* <Baloon className = "baloon1" ratioX = "0.2" ratioY = "0.9"/> */}
+              
               <Baloon color = "red" className = "baloon1Wrap" ratioX = "0.2" ratioY = "0.9"/>
               <Baloon color = "green" className = "baloon2Wrap" ratioX = "0.4" ratioY = "0.8"/>
               <Baloon color = "blue" className = "baloon3Wrap" ratioX = "0.6" ratioY = "0.6"/>
               <Baloon color = "yellow" className = "baloon4Wrap" ratioX = "0.8" ratioY = "0.4"/>
-              <Baloon color = "brown" className = "baloon5Wrap" ratioX = "0.9" ratioY = "0.2"/>
-              
+              <Baloon color = "brown" className = "baloon5Wrap" ratioX = "0.9" ratioY = "0.2"/>              
         </div>
         <ApiFriends/>
-        <Canvas/>
+        {document.querySelector('canvas') && <Canvas canvasElement = {document.querySelector('canvas')}/>}
         <Router>
           <div className="pageWrap">
                 <Clouds data = {this.state.cloudData} handleCloudClick = {this.handleCloudClick}/>
@@ -228,12 +223,12 @@ class App extends Component {
                    
                    <section className="mainSectionWrap">
                         <Switch>
-                        <Route path="/bndev/" exact component={()=> IntroAnimation([this.state.isSwiped, !this.state.throttleIntroAnimations])} />
-                        <Route path="/" exact component={()=> IntroAnimation([this.state.isSwiped, !this.state.throttleIntroAnimations])} />
-                        <Route path="/bio" component={Bio} />
-                        <Route path="/bio2" component={Bio2} />
-                        <Route path="/contact" component={Contact} />
-                        <Route component={ErrorPage}/>
+                          <Route path="/bndev/" exact component={()=> IntroAnimation([this.state.isSwiped, !this.state.throttleIntroAnimations])} />
+                          <Route path="/" exact component={()=> IntroAnimation([this.state.isSwiped, !this.state.throttleIntroAnimations])} />
+                          <Route path="/bio" component={Bio} />
+                          <Route path="/bio2" component={Bio2} />
+                          <Route path="/contact" component={Contact} />
+                          <Route component={ErrorPage}/>
                         </Switch>
                    </section>
           </div>

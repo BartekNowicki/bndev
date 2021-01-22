@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Loader = props => {
+const Loader = (props: any): JSX.Element => {
   return (
 	<>
     <div className="loader">
