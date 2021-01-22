@@ -7,7 +7,7 @@ const SwipeIfMobile = (props: any): JSX.Element | null=> {
     swipeBox.classList.add('mobileSwipe');
     swipeBox.addEventListener('touchstart', (e) => {
         if (clientX && clientY) {
-            clientX = e.touches[0].clientX; 
+            clientX = e.touches[0].clientX; t 
             clientY = e.touches[0].clientY;
         }            
     });
